@@ -16,4 +16,9 @@
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
+  
+  @media only screen and (max-width: $screen-sm-max) {
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+  }
 }

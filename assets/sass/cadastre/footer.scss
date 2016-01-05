@@ -36,6 +36,14 @@ footer {
   .container-fluid {
     max-width: $container-large-desktop;
     margin: 0 auto;
+    
+    @media only screen and (max-width: $screen-md-max) {
+      max-width: $container-desktop;
+    }
+    
+    @media only screen and (max-width: $screen-sm-max) {
+      max-width: $container-tablet;
+    }
   }
 }
 
@@ -71,6 +79,14 @@ address {
   margin: 0 auto;
   background: transparent;
   border: 0;
+  
+  @media only screen and (max-width: $screen-md-max) {
+    max-width: $container-desktop;
+  }
+  
+  @media only screen and (max-width: $screen-sm-max) {
+    max-width: $container-tablet;
+  }
   
   a {
     font-size: 1em;
