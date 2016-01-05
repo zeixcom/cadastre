@@ -1,0 +1,38 @@
+/* ==========================================================
+ * navigation.scss
+ * Navgiation element styles for cadastre
+ *
+ * Author: Fabio Iaderosa, fabio.iaderosa@zeix.com
+ * Date:   2016-01-05 11:45
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+.nav-services {
+	background: $dark-grey;
+	padding-top: 12px;
+	font-size: 0.875em;
+}
+
+ .nav-lang {
+ 	margin-bottom: 12px;
+	a {
+		color: $white;
+
+		&.active {
+			background: $very-dark-grey;
+		}
+
+		&:hover {
+			color: $white;
+		}
+
+		&.disabled {		
+			color: $very-light-grey;
+			&:hover {
+				text-decoration: none;		
+			}
+		}
+	}
+}
