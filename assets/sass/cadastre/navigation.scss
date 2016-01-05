@@ -9,6 +9,17 @@
  * Licensed under MIT
  =========================================================== */
 
+.nav-service {
+	background: $dark-grey;
+	a {
+		color: $very-lighter-grey;
+
+		&:hover {
+			color: $very-lighter-grey;
+		}
+	}
+}
+
 .nav-services {
 	background: $dark-grey;
 	padding-top: 12px;
@@ -17,15 +28,16 @@
 
  .nav-lang {
  	margin-bottom: 12px;
+ 	border-left: 0;
 	a {
-		color: $white;
+		color: $very-lighter-grey;
 
 		&.active {
 			background: $very-dark-grey;
 		}
 
 		&:hover {
-			color: $white;
+			color: $very-lighter-grey;
 		}
 
 		&.disabled {		
