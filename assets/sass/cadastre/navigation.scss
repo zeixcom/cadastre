@@ -11,6 +11,11 @@
 
 .nav-service {
 	background: $dark-grey;
+
+	li {
+		margin-left: 2.8em;
+	}
+	
 	a {
 		color: $very-lighter-grey;
 
