@@ -10,5 +10,10 @@
  =========================================================== */
 
 .container-main {
-  box-shadow: 24px 10px 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
+  box-shadow: 24px 0 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
