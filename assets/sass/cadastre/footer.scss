@@ -1,0 +1,77 @@
+/* ==========================================================
+ * footer.scss
+ * Footer element styles for cadastre
+ *
+ * Author: Esther Brunner, esther.brunner@zeix.com
+ * Date:   2016-01-05 11:45
+ *
+ * Copyright 2016 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: $night-rider;
+  border-top: 0;
+  color: $smoke;
+  
+  h3 {
+    font-size: 1em;
+    color: $very-pale-blue;
+    margin: 4.5em 0 1em;
+    padding: 0;
+  }
+  
+  a {
+    color: $very-soft-blue;
+    
+    &:hover {
+      color: $very-sort-blue-light;
+    }
+  }
+  
+  .container-fluid {
+    max-width: $container-large-desktop;
+    margin: 0 auto;
+  }
+}
+
+address {
+  border-top: 0;
+  text-align: center;
+  
+  > span {
+    display: inline-block;
+  }
+  
+  .pull-right {
+    float: none !important;
+    display: inline-block;
+    
+    li {
+      margin-left: 1em;
+      
+      &:before {
+        content: '·';
+      }
+      
+      a {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+.site-map {
+  display: block;
+  max-width: $container-large-desktop;
+  margin: 0 auto;
+  background: transparent;
+  border: 0;
+  
+  a {
+    font-size: 1em;
+  }
+}
