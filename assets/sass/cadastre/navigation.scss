@@ -17,10 +17,10 @@
 	}
 	
 	a {
-		color: $very-lighter-grey;
+		color: $very-light-grey;
 
 		&:hover {
-			color: $very-lighter-grey;
+			color: $very-light-grey;
 		}
 	}
 }
@@ -31,18 +31,18 @@
 	font-size: 0.875em;
 }
 
- .nav-lang {
+.nav-lang {
  	margin-bottom: 12px;
  	border-left: 0;
 	a {
-		color: $very-lighter-grey;
+		color: $very-light-grey;
 
 		&.active {
 			background: $very-dark-grey;
 		}
 
 		&:hover {
-			color: $very-lighter-grey;
+			color: $very-light-grey;
 		}
 
 		&.disabled {		

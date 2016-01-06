@@ -1,0 +1,24 @@
+/* ==========================================================
+ * layout.scss
+ * Layout styles for cadastre
+ *
+ * Author: Esther Brunner, esther.brunner@zeix.com
+ * Date:   2016-01-05 11:45
+ *
+ * Copyright 2016 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+.container-main {
+  box-shadow: 24px 0 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  
+  @media only screen and (max-width: $screen-sm-max) {
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+  }
+}
