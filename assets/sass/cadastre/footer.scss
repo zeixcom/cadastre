@@ -29,7 +29,11 @@ footer {
     color: $very-soft-blue;
     
     &:hover {
-      color: $very-sort-blue-light;
+      color: $very-soft-blue-light;
+    }
+    
+    &:visited {
+      color: $very-soft-blue;
     }
   }
   

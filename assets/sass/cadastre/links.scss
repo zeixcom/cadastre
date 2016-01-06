@@ -1,18 +1,23 @@
 /* ==========================================================
- * type.scss
- * Global typographic styles
+ * links.scss
+ * Link styles for cadastre
  *
  * Author: Esther Brunner, esther.brunner@zeix.com
- * Date:   2016-01-05 17:17:40
+ * Date:   2016-01-06 11:45
  *
  * Copyright 2016 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
 
-@charset "UTF-8";
-
-@media only screen and (max-width: $screen-sm-max) {
-  body {
-    font-size: 16px;
+a {
+  color: $dark-blue;
+  
+  &:visited {
+    color: $dark-blue;
+  }
+  
+  &:hover {
+    color: $very-dark-blue;
+    text-decoration: none;
   }
 }
