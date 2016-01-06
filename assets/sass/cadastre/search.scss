@@ -1,0 +1,100 @@
+/* ==========================================================
+ * search.scss
+ * Search field styles
+ *
+ * Author: Fabio Iaderosa, fabio.iaderosa@zeix.com
+ * Date:   2016-01-05 16:15
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+.form-search {
+	margin-top: 10px; //entfernen
+	.icon--search {
+		color: $very-light-grey;
+		background: $very-dark-grey;	
+		padding: 0 0 0 6px;
+    	left: 0;
+    	top: 0;
+    	height: 25px;
+	}
+
+	.icon--close {
+		color: $lighter-grey;
+	}
+
+	.form-control {
+		border-radius: 0;	
+		background:  $lighter-grey;
+		background-color: $lighter-grey !important;
+		border-color: $lighter-grey;
+		box-shadow: none;
+	}
+}
+
+.search-box {
+	background: $lighter-grey;
+	border: 0;
+	
+	.control-label {
+		margin-left: 1.6em;
+	}
+
+	.form-control {
+		border-color: $lighter-grey;
+		border-radius: 0;		
+		width: 490px;		
+	}
+
+	.form-group {
+		display: block;
+	}
+
+	.btn {
+		margin-left: 189px;
+		margin-top: 1.6em;
+		padding: 0.45em 2em;
+	}
+}
+
+
+@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-min) { 
+
+	.search-box {		
+		.form-control {
+			width: 420px;
+    		margin-left: 1.2em;
+		}	
+
+		.btn {
+			margin-left: 1.2em;
+		}	
+	}
+}
+
+
+@media only screen and (max-width: $screen-xs-max) {
+	.search-box {
+		input[type=submit] {
+			margin: 0 0 0 1.2em;
+			width: 93.4%;    		
+		} 
+
+		.form-control {
+			width: 93.4%;
+    		margin-left: 1.2em;
+		}   
+	}
+  }
+
+// @media only screen and (max-width: $screen-xs) { 
+// 	.search-box {
+// 		input[type=submit] {		
+// 			width: auto;    		
+// 		} 
+// 		.form-control {
+// 			width: auto;
+// 		}
+// 	}
+// }
+
