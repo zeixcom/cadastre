@@ -8,26 +8,31 @@
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- .nav-tabs {
+ .nav-tabs { 	
  	border-bottom: 1px solid $darker-grey;
-
-	li {
+	
+	li {		
 		a {
-			background: $gainsboro;
+			background: $light-grey;
 			border-bottom: 1px solid $darker-grey;
 			border-right: 1px solid $darker-grey;
 			border-top: 1px solid $darker-grey;
-			color: $light-grey;
-		}
+			color: $night-rider;
 
+			&:hover {
+				background: $tab-hover-grey;
+				border-color: $darker-grey;	
+				border-left: 1px solid transparent;
+			}
+		}
+		
 		&.active a, &.active:hover a {   
      		padding-bottom: 10px !important;       		
   		}	
-	
 
   		&:hover {
-
   			a {
+  				color: $night-rider;
 				padding-top: 10px !important;
   			}  			
   		}
@@ -35,17 +40,20 @@
  }
 
  .nav-tabs>li.active>a:focus {
- 	border-top: 1px solid $darker-grey;
-  	border-bottom-color: $white;
+ 	border-top: 1px solid $darker-grey;  	
+}
+
+.nav-tabs>li.active>a:focus{
+	color: $night-rider;	
 }
 
 
-
  .tab-content{
-	&.tab-border {
-		border-right: 1px solid $darker-grey;
-	    border-left: 1px solid $darker-grey;
-	    border-bottom: 1px solid $darker-grey;
+	&.tab-border {	    
+		background: $white;
+	    border-right: 1px solid $darker-grey;
+    	border-left: 1px solid $darker-grey;
+    	border-bottom: 1px solid $darker-grey;
 	}
  }
 
@@ -63,4 +71,35 @@
   a {
     border-left: 1px solid $darker-grey;
   }
+}
+
+
+.collapsify {
+  a[data-toggle="collapse"] {
+    border: 1px solid $darker-grey;			
+    color: $night-rider;
+    transition: all 0.2s;
+    border-top: 0;    
+    &:before {color: $black;}
+    &:hover {text-decoration: none;}
+    &:first-child {border: 1px solid $darker-grey;}
+
+    &:not(.collapse-closed) {
+    	background: $white;   	
+    	border-bottom: 0;
+    }
+  }
+  a[data-toggle="collapse"].collapse-closed {    
+    border-bottom: 1px solid $darker-grey;
+    color: $night-rider;   
+    &:first-child {border-top: 1px solid $darker-grey;;}
+  }
+  div[class*="col"], .collapse {
+    border-bottom: 1px solid $darker-grey;
+    border-right: 1px solid $darker-grey;
+    border-left: 1px solid $darker-grey;    
+  } 
+  .collapse.in {
+    background: $white;
+  } 
 }
