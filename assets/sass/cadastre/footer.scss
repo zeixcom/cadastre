@@ -21,7 +21,7 @@ footer {
   h3 {
     font-size: 1em;
     color: $very-pale-blue;
-    margin: 4.5em 0 1em;
+    margin: (2 * $grid-gutter-width) 0 1em;
     padding: 0;
   }
   
@@ -64,14 +64,22 @@ address {
     display: inline-block;
     
     li {
-      margin-left: 1em;
+      margin-left: $grid-gutter-width;
       
-      &:before {
-        content: '·';
+      a {
+        margin-left: $grid-gutter-width;
+      }
+    }
+    
+    @media only screen and (max-width: $screen-sm-max) {
+      li {
+        margin-left: 0;
       }
       
       a {
-        margin-left: 1em;
+        background: transparent;
+        margin-left: 0;
+        border-left: 0;
       }
     }
   }
@@ -83,6 +91,7 @@ address {
   margin: 0 auto;
   background: transparent;
   border: 0;
+  padding-bottom: (2 * $grid-gutter-width);
   
   @media only screen and (max-width: $screen-md-max) {
     max-width: $container-desktop;
@@ -95,4 +104,26 @@ address {
   a {
     font-size: 1em;
   }
+  
+  .site-map-toggle {
+    top: ($grid-gutter-width / 2);
+  }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  
+  .footer-service {
+    
+    h3 {
+      margin-top: $grid-gutter-width;
+    }
+    
+    ul {
+      border-bottom: 1px solid $coal;
+    }
+    
+    li {
+      border-top: 1px solid $coal;
+    }
+  } 
 }
