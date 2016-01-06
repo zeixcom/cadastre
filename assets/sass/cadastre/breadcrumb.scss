@@ -1,0 +1,118 @@
+/* ==========================================================
+ * breadcrumb.scss
+ * Breadcrumb styles
+ *
+ * Author: Esther Brunner, esther.brunner@zeix.com
+ * Date:   2016-01-06 14:21:47
+ *
+ * Copyright 2016 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+@charset "UTF-8";
+
+.breadcrumb {
+  margin: 0 0 3px;
+  @extend .clearfix;
+  
+  li {
+    position: relative;
+    
+    display: block;
+    float: left;
+    margin: 0 0 1px;
+    background: $white;
+    line-height: 24px;
+    height: 24px;
+  }
+  
+  li + li {
+    padding-left: ($grid-gutter-width / 2);
+  }
+  
+  li + li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    content: '';
+    border: 12px solid transparent;
+    border-left-color: $silver;
+    border-right-width: 0;
+  }
+  
+  li + li:after {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    
+    content: '';
+    border: 11px solid transparent;
+    border-left-color: $white;
+    border-right-width: 0;
+  }
+  
+  a {
+    font-size: $font-size-small;
+    padding: 0 ($grid-gutter-width / 2);
+  }
+  
+  span.icon {
+    display: none;
+  }
+  
+  li.active {
+    color: $night-rider;
+    font-size: $font-size-small;
+    padding: 0 ($grid-gutter-width / 2) 0 $grid-gutter-width;
+  }
+  
+  &.breadcrumb--search {
+    margin: $grid-gutter-width 0 ($grid-gutter-width / 2);
+    
+    li {
+      height: 16px;
+      line-height: 16px;
+    }
+    
+    li + li {
+      padding-left: 8px;
+    }
+    
+    li + li:before {
+      border: 8px solid transparent;
+      border-left-color: $silver;
+      border-right-width: 0;
+    }
+    
+    li + li:after {
+      border: 7px solid transparent;
+      border-left-color: $white;
+      border-right-width: 0;
+    }
+    
+    li:first-child a {
+      padding-left: 0;
+    }
+    
+    a, li.active {
+      color: $empress;
+      font-size: (0.75 * $font-size-base);
+      padding: 0 6px;
+    }
+    
+    a:hover {
+      color: $coal;
+    }
+    
+    li.active {
+      padding-left: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: $screen-sm-max) {
+    &:not(.breadcrumb--search) {
+      display: block;
+    }
+  }
+}

@@ -54,6 +54,10 @@
 	}
 }
 
+.navbar {
+  margin-bottom: $grid-gutter-width;
+}
+
 .dropdown-menu {
   a:hover {
     text-decoration: none;
