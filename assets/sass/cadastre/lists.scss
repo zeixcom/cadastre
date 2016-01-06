@@ -9,12 +9,16 @@
  * Licensed under MIT
  =========================================================== */
 
- li {
- 	font-size: 1em; 
- }
+li {
+  font-size: 1em; 
+}
 
- .list-unstyled {
+.list-unstyled {
 	li {
-		margin-bottom: 12px;
+		margin-bottom: ($grid-gutter-width / 2);
 	}
- }
+}
+
+dt, dd {
+  font-size: 1em;
+}
