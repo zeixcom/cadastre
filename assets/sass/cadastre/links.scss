@@ -20,4 +20,16 @@ a {
     color: $very-dark-blue;
     text-decoration: none;
   }
+  
+  p & {
+    text-decoration: none;
+  }
+   
+  p &:hover {
+    text-decoration: none;
+  }
+}
+
+a.icon:hover, a[data-toggle=collapse]:hover {
+  text-decoration: none;
 }
