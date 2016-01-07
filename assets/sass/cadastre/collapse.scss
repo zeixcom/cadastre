@@ -1,0 +1,43 @@
+/* ==========================================================
+ * collapse.scss
+ *  
+ *
+ * Author: Fabio Iaderosa, fabio.iaderosa@zeix.com
+ * Date:   2016-01-07 10:21
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+
+a[data-toggle="collapse"] {
+	font-size: $font-size-h3;		
+	border-bottom: 1px solid $light-grey;
+
+	&:first-child {
+		border-bottom: 1px solid $light-grey;
+		border-top: 1px solid $light-grey;
+	}
+
+	&.collapsed{
+		&:before {		
+			content: ":";
+			font-size: 0.73em;
+		}
+	}
+
+	&.active {
+		&:before {
+			content: ",";				
+			font-size: 0.73em;				
+		}
+	}
+}
+
+.collapse-box {
+	a[data-toggle="collapse"] { 
+		border: none;
+	}
+}
+
+
