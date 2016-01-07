@@ -1,0 +1,60 @@
+/* ==========================================================
+ * select.scss
+ * Custom select styles added after the chosen-theme
+ *
+ * Author: Fabio Iaderosa, fabio.iaderosa@zeix.com
+ * Date:   2014-01-06 16:52
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.yamm--select {
+	.dropdown-toggle {
+		background: $very-dark-grey;		
+    	border: none;
+		border-radius: 0;
+		box-shadow: none;
+		color: #f0f0f0;		
+		font-size: 0.875em;
+		padding: 0 14px;
+		width: 140px;
+
+		&:hover, &:focus {
+			background: $empress;
+			color: $very-lighter-grey;			
+		}
+		span {
+			border-left: 0;
+			color: $lighter-grey;
+		}
+	}
+
+	.dropdown-menu {
+		box-shadow: none;
+	}
+
+	.dropdown{
+		&.open {
+			.dropdown-toggle {
+				background: $white;
+			    border-color: $very-light-grey;	    
+			    box-shadow: none;
+			    color: $night-rider;	    
+
+			    span {
+			    	color: $night-rider;	    
+			    }
+  			}
+		}
+	}
+
+	.yamm-close {
+		color: $night-rider;
+	}
+}
+
+
+
+
+

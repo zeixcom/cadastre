@@ -51,10 +51,17 @@
  .tab-content{
 	&.tab-border {	    
 		background: $white;
-	    border-right: 1px solid $darker-grey;
-    	border-left: 1px solid $darker-grey;
-    	border-bottom: 1px solid $darker-grey;
+	  border-right: 1px solid $darker-grey;
+    border-left: 1px solid $darker-grey;
+    border-bottom: 1px solid $darker-grey;
 	}
+
+  .tab-content {
+    border-bottom: 1px solid  $darker-grey;
+    border-left: 1px solid  $darker-grey;
+    border-right: 1px solid  $darker-grey;
+    border-top: 0;
+  }
  }
 
  .nav-tabs li.active a, .nav-tabs li.active:hover a, .nav-tabs li:hover a {
