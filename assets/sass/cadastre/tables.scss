@@ -1,0 +1,65 @@
+/* ==========================================================
+ * tables.scss
+ * Table styles
+ *
+ * Author: Fabio Iaderosa, fabio.iaderosa@zeix.com
+ * Date:   2016-01-07 14:30
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+table.table-bordered { 
+	border: none;
+  	thead th, thead td, tfoot td {
+  		background: none;  
+ 	} 
+
+ 	thead {
+		border-top: 2px solid $darker-grey;
+	}
+
+	>tbody>tr>td, >tbody>tr>th, >tfoot>tr>td, >tfoot>tr>th, >thead>tr>td, >thead>tr>th {
+		border-left: none;	
+		border-right: none;	
+		border-bottom: none;
+	}
+
+	a[data-toggle="collapse"]{
+		&:first-child {
+			border: none;
+			font-size: 1em;
+		}
+	}
+}
+
+.table-striped { 
+  > tbody > tr:nth-of-type(even) {
+    background-color: transparent;
+  }  
+}
+
+tr.active {
+  th {
+  	background: transparent !important;}
+  tbody & th {
+  	background: transparent !important;
+  }
+  td {
+  	background: transparent !important;
+  }
+}
+
+th.active {
+	background: transparent !important;
+}
+tbody th.active {
+	background: transparent !important;
+}
+td.active {
+	background: transparent !important;
+}
+tfoot td.active {
+	background: transparent !important;
+}
+
