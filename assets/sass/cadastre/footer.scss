@@ -103,11 +103,30 @@ address {
   
   a {
     font-size: 1em;
-    padding: 0;
+    padding: 0;    
   }
   
   .site-map-toggle {
     top: ($grid-gutter-width / 2);
+  }
+
+  a[data-toggle="collapse"]{
+    &:first-child {
+      border: none;
+      font-size: 1em;
+    }
+
+    &:before {
+      top: -1px;
+    }
+  }  
+
+  .site-map-toggle {
+    &:before {
+      content: ",";       
+      font-size: 0.73em;
+      top: -1px;
+    }
   }
 }
 

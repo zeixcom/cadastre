@@ -10,54 +10,53 @@
  =========================================================== */
 
 .nav-service {
-	background: $dark-grey;
+  background: $dark-grey;
 
-	li {
-		margin-left: 2.8em;
-	}
-	
-	a {
-		color: $very-light-grey;
+  li {
+    margin-left: 2.8em;
 
-		&:hover {
-			color: $white;
-		}
-	}
+    a {
+      color: $nav-color;
+
+      &:hover {
+        color: $very-light-grey;
+      }
+    }
+  }
 }
 
 .nav-services {
-	background: $dark-grey;
-	padding-top: ($grid-gutter-width / 2);
-	font-size: $font-size-small;
+  background: $dark-grey;
+  padding-top: ($grid-gutter-width / 2);
+  font-size: $font-size-small;
 }
 
 .nav-lang {
- 	margin-bottom: ($grid-gutter-width / 2);
- 	border-left: 0;
- 	
- 	li {
-   	margin-right: 4px;
- 	}
- 	
-	a {
-		color: $very-light-grey;
+  margin-bottom: ($grid-gutter-width / 2);
+  border-left: 0;
+  
+  li {
+    margin-right: 4px;
+    
+    a {
+      color: $nav-color;
 
-		&.active {
-  		color: $white;
-			background: $very-dark-grey;
-		}
+      &.active {
+        background: $very-dark-grey;
+      }
 
-		&:hover {
-			color: $white;
-		}
+      &:hover {
+        color: $very-light-grey;
+      }
 
-		&.disabled {
-			color: $silver;
-			&:hover {
-				text-decoration: none;		
-			}
-		}
-	}
+      &.disabled {
+        color: $silver;
+        &:hover {
+          text-decoration: none;    
+        }
+      }
+    }
+  } 
 }
 
 .navbar {
