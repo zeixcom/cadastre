@@ -14,13 +14,13 @@
 
 	li {
 		margin-left: 2.8em;
-	}
-	
-	a {
-		color: $very-light-grey;
 
-		&:hover {
-			color: $very-light-grey;
+		a {
+			color: $nav-color;
+
+			&:hover {
+				color: $very-light-grey;
+			}
 		}
 	}
 }
@@ -34,28 +34,26 @@
 .nav-lang {
  	margin-bottom: 12px;
  	border-left: 0;
-	a {
-		color: $very-light-grey;
+ 	li {
+		a {
+			color: $nav-color;
 
-		&.active {
-			background: $very-dark-grey;
-		}
+			&.active {
+				background: $very-dark-grey;
+			}
 
-		&:hover {
-			color: $very-light-grey;
-		}
-
-		&.disabled {		
-			color: $very-light-grey;
 			&:hover {
-				text-decoration: none;		
+				color: $very-light-grey;
+			}
+
+			&.disabled {		
+				color: $very-light-grey;
+				&:hover {
+					text-decoration: none;		
+				}
 			}
 		}
-	}
-}
-
-.navbar {
-  margin-bottom: $grid-gutter-width;
+ 	}	
 }
 
 .dropdown-menu {
