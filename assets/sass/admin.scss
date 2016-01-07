@@ -125,19 +125,21 @@
 
 // Overrides for Cadastre
 @import 'cadastre/type';
-@import 'cadastre/titles';
-@import 'cadastre/navigation';
-@import 'cadastre/layout';
-@import 'cadastre/header';
+@import 'cadastre/buttons';
 @import 'cadastre/footer';
+@import 'cadastre/header';
+@import 'cadastre/layout';
 @import 'cadastre/links';
 @import 'cadastre/lists';
-@import 'cadastre/tab';
-@import 'cadastre/search';
-@import 'cadastre/breadcrumb';
-@import 'cadastre/buttons';
-@import 'cadastre/anchor-links';
-@import 'cadastre/well';
-@import 'cadastre/select';
-@import 'cadastre/collapse';
 @import 'cadastre/tables';
+@import 'cadastre/titles';
+
+@import 'cadastre/anchor-links';
+@import 'cadastre/breadcrumb';
+@import 'cadastre/collapse';
+@import 'cadastre/navigation';
+@import 'cadastre/search';
+@import 'cadastre/select';
+@import 'cadastre/tab';
+@import 'cadastre/well';
+

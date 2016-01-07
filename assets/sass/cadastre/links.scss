@@ -12,10 +12,6 @@
 a {
   color: $dark-blue;
   
-  &:visited {
-    color: $dark-blue;
-  }
-  
   &:hover {
     color: $very-dark-blue;
     text-decoration: none;
@@ -28,6 +24,10 @@ a {
   p &:hover {
     text-decoration: none;
   }
+}
+
+a:visted {
+  color: $dark-blue;
 }
 
 a.icon:hover, a[data-toggle=collapse]:hover {
