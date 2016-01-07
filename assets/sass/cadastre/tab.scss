@@ -86,13 +86,14 @@
 }
 
 
+
 .collapsify {
   a[data-toggle="collapse"] {
     border: 1px solid $darker-grey;			
     color: $night-rider;
     transition: all 0.2s;
     border-top: 0;    
-    &:before {color: $black;}
+    &:before {color: $darker-grey;}
     &:hover {text-decoration: none;}
     &:first-child {border: 1px solid $darker-grey;}
 
@@ -104,7 +105,8 @@
   a[data-toggle="collapse"].collapse-closed {    
     border-bottom: 1px solid $darker-grey;
     color: $night-rider;   
-    &:first-child {border-top: 1px solid $darker-grey;;}
+    &:first-child {border-top: 1px solid $darker-grey;
+    }
   }
   div[class*="col"], .collapse {
     border-bottom: 1px solid $darker-grey;
