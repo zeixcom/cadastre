@@ -125,6 +125,7 @@
 
 // Overrides for Cadastre
 @import 'cadastre/type';
+@import 'cadastre/titles';
 @import 'cadastre/navigation';
 @import 'cadastre/layout';
 @import 'cadastre/header';
@@ -133,6 +134,7 @@
 @import 'cadastre/lists';
 @import 'cadastre/tab';
 @import 'cadastre/search';
+@import 'cadastre/breadcrumb';
 @import 'cadastre/buttons';
 @import 'cadastre/anchor-links';
 @import 'cadastre/well';
