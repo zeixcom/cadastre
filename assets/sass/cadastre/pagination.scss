@@ -1,0 +1,18 @@
+/* ==========================================================
+ * pagination.scss
+ * Navigation handling pagination on contents
+ *
+ * Author: Fabio Iaderosa, fabio.iaderosa@zeix.com
+ * Date:   2014-05-01 11:22:48
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.pagination-container {
+  border-bottom: 1px solid $darker-grey;  
+}
+
+.pagination-end {
+  border-bottom: none;
+}
