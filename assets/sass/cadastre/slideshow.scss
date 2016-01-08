@@ -1,0 +1,54 @@
+/* ==========================================================
+ * slideshow.scss
+ * Slideshow component
+ *
+ * Author: Fabio , fabio.iaderosa@zeix.com
+ * Date:   2015-01-8 15:22
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+ .carousel-slideshow {
+ 	.carousel-controls {
+		a{
+
+			&:hover {
+				&:before {
+					color: $night-rider;
+				}
+			}
+
+			&:before {
+				color: $night-rider;
+			}
+
+			&.right {
+				border-left: 1px solid $darker-grey; 
+				&:before {
+					content: ":";
+				}
+			}
+
+			&.left {
+				&:before {
+					content: ".";
+				}	
+			}
+
+			&.disabled{
+				&:hover {
+					&:before {
+						color: $lighter-grey;
+					}
+				}
+
+				&:before {
+					color: $lighter-grey;
+				}				
+			}
+		}		
+ 	}
+ }
+
+  
