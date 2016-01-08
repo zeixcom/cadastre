@@ -10,7 +10,24 @@
  ========================================================== */
 
 .pagination-container {
-  border-bottom: 1px solid $darker-grey;  
+  border-bottom: 1px solid $darker-grey; 
+
+	.pagination {
+		.active {
+			a {
+				background: none;
+				color: $night-rider;
+			}
+		}
+	}
+
+    .separator {
+    	border-right: 1px solid $very-dark-grey;
+    }
+
+    .separator-left {
+    	border-left: 1px solid $very-dark-grey;	
+    }
 }
 
 .pagination-end {
