@@ -17,15 +17,24 @@
 	background-color: transparent;		
 	border-bottom: 1px solid $darker-grey;
 	font-size: 1em;
-	
+
+	p {
+		font-size: 0.875em;
+	}
+
+	a {
+		font-size: 1em;	
+	}	
+
 	&:last-child {
 		font-size: 1em;
 		border-bottom: 2px solid $darker-grey;
-	}
 
-	a {	
-		&:last-child {
+		a {
 			font-size: 1em;
 		}
 	}
  }
+
+
+
