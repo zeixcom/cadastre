@@ -9,6 +9,18 @@
  * Licensed under MIT
  ========================================================== */
 
+.featuredelementsteaser {
+	.list-group {
+		h3 {
+			font-size: 1em;			
+		}
+
+		p {
+			font-size: $font-size-small;
+		}
+	}
+}
+
 .list-group-header {
 	border-bottom: 2px solid $darker-grey;
 }
