@@ -12,8 +12,18 @@
  .btn {
  	border-radius: 0;
  	padding-bottom: 0.3em;
+	border-color: $dark-grey;
 
  	&.disabled {
  		background-color: $silver;
+ 		border-color: $dark-grey;
+ 	}
+
+ 	&:focus {
+ 		border-color: $dark-grey;
+ 	}
+
+ 	&.btn-default {
+ 		border-color: $dark-grey;	
  	}
  }
