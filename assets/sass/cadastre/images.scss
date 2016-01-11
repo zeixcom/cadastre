@@ -10,6 +10,27 @@
  =========================================================== */
 
  @charset "UTF-8";
+ 
+figure {
+  
+  &.pull-left {
+    padding-right: $grid-gutter-width;
+    padding-bottom: ($grid-gutter-width / 2);
+    
+    figcaption {
+      padding-right: $grid-gutter-width;
+    }
+  }
+  
+  &.pull-right {
+    padding-left: $grid-gutter-width;
+    padding-bottom: ($grid-gutter-width / 2);
+    
+    figcaption {
+      padding-left: $grid-gutter-width;
+    }
+  }
+}
 
 figcaption {
   font-size: $font-size-small;
