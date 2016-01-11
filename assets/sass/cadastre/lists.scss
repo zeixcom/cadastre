@@ -10,30 +10,13 @@
  =========================================================== */
 
  ul {
-  list-style-type: none;
-  padding-left: 0;
-
-  li {
-  	&:before {
-  		content: "-";
-  		padding-right: 0.8em;
-  	}
-  }
+  list-style-type: circle;
+  padding-left: 0; 
 }
 
 
 li {
   font-size: 1em; 
-}
-
-.list-unstyled {
-	li {		
-		margin-bottom: ($grid-gutter-width / 2);		
-
-		&:before {
-			content: "";
-		}
-	}
 }
 
 dt, dd {
