@@ -1,0 +1,61 @@
+/* ==========================================================
+ * progression.scss
+ * Progession navigation styles
+ *
+ * Author: Fabio Iaderosa, fabio.iaderosa@zeix.com
+ * Date:   2014-01-11 14:12
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+ .nav-process {
+ 	background: $smoke;
+ 	height: 44px;
+
+ 	ul { 		
+ 		padding: 12px 6px 0 6px;   	
+ 	
+	 	li {
+
+	 		a {
+
+	 			&:before {	 				
+	 				border-left: 3px solid $smoke;
+	 			}
+
+	 			&:after {
+					background: $smoke;
+	 			}
+
+	 			&:hover {
+	 				background: $darker-grey;
+
+	 				&:after {
+						border-left: 3px solid $darker-grey;  					
+	 				}
+	 			}	
+	 		}	
+
+	 		&.active {
+	 			a {
+	 				background: $darker-grey;
+					
+					&:hover {
+						&:after {
+	 						border-left: 5px solid $darker-grey;
+	 					}
+					}
+
+					&:before {
+	 					border-left: 5px solid $smoke;
+	 				}
+
+	 				&:after {
+	 					border-left: 5px solid $darker-grey;
+	 				}
+	 			}
+	 		} 
+	 	}	
+ 	}
+ }
