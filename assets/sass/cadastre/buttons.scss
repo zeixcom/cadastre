@@ -11,4 +11,9 @@
 
  .btn {
  	border-radius: 0;
+ 	padding-bottom: 0.3em;
+
+ 	&.disabled {
+ 		background-color: $silver;
+ 	}
  }
