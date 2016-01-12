@@ -19,14 +19,34 @@
 				color: $night-rider;
 			}
 		}
+
+		li{
+			a {
+				margin-top: 2px;
+			}
+
+			&:first-child {
+				a {
+					margin-top: 2px;
+					padding: 0 3px;
+				}
+			}
+
+			&:last-child {
+				a {
+					margin-top: 2px;
+					padding: 0 3px;
+				}
+			}
+		}
 	}
 
     .separator {
-    	border-right: 1px solid $very-dark-grey;
+    	border-right: 1px solid $darker-grey;
     }
 
     .separator-left {
-    	border-left: 1px solid $very-dark-grey;	
+    	border-left: 1px solid $darker-grey;	
     }
 }
 
