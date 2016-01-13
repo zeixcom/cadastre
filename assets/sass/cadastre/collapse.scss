@@ -10,9 +10,9 @@
  =========================================================== */
 
 
-a[data-toggle="collapse"] {
-	font-size: $font-size-h3;		
+a[data-toggle="collapse"] {			
 	border-bottom: 1px solid $light-grey;
+	padding: 10px 0px 8px 0;
 
 	&:first-child {
 		border-bottom: 1px solid $light-grey;
