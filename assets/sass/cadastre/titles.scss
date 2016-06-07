@@ -25,6 +25,23 @@ h1 {
   }
 }
 
+
+
+div[class*=col-sm-] > h3:first-child {
+	margin-top: 0;	
+}
+div[class*=col-sm-] > img:nth-child(2) {
+	margin-bottom: 24px;	
+}
+
+
+
+/*
+div[class*=col-md-] div[class*=col-sm-] h3:first-of-type {
+	margin-top: 12px;
+}
+*/
+
 // Responsive behaviour
 @media only screen and (max-width: $screen-md-max) {
   h1 { font-size: 2.25em; }
