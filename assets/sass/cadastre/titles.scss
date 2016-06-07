@@ -26,6 +26,7 @@ h1 {
 }
 
 
+// TODO: prefix with class for Teaser-Component
 
 div[class*=col-sm-] > h3:first-child {
 	margin-top: 0;	
@@ -36,11 +37,7 @@ div[class*=col-sm-] > img:nth-child(2) {
 
 
 
-/*
-div[class*=col-md-] div[class*=col-sm-] h3:first-of-type {
-	margin-top: 12px;
-}
-*/
+
 
 // Responsive behaviour
 @media only screen and (max-width: $screen-md-max) {
