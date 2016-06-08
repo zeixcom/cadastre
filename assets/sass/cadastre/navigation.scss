@@ -11,6 +11,9 @@
 
  .nav-main {
   border-top: 5px solid $darker-grey;
+   @media only screen and (max-width: $screen-xs-max) {
+	   border-bottom:0;
+   }
  }
 
 .nav-service {

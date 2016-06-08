@@ -123,7 +123,7 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	  }
 	  a:hover,
 	  .active a {
-	  	border-bottom: 3px solid $sinbad-dark;	  	
+	  	border-bottom: 5px solid $sinbad-dark;	  	
 	  }
   }
   &:nth-child(2) {
@@ -135,12 +135,9 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	  }
 	  a:hover,
 	  .active a {
-	  	border-bottom: 3px solid $shilo-dark;  	
+	  	border-bottom: 5px solid $shilo-dark;  	
 	  }	  
   }
-  
-  
-  
   &:nth-child(3) {
 	  
 	  a {
@@ -151,10 +148,8 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	  }
 	  a:hover,
 	  .active a {
-	  	border-bottom: 3px solid $sapling-dark;  	
+	  	border-bottom: 5px solid $sapling-dark;  	
 	  }	
-	  
-	 
   }
   
   
@@ -175,6 +170,7 @@ Please be careful about the length of the text in the tabs, the height is fixed.
     border-radius: 0;
     color: $night-rider;
     overflow: hidden;
+    border-top:1px solid white;
     &:after {
       content: '';
       height: 0;
@@ -188,20 +184,22 @@ Please be careful about the length of the text in the tabs, the height is fixed.
   }
   &.active a, &.active:hover a {
     padding-bottom: 10px !important;
+    border-top:1px solid blue;
   }
 	a:hover {
-		height: 3px;
+		height: 5px;
 	} 
 	&.active a  {
     border: none;
     color: $cod-grey;
+    
     &:after {
-      height: 3px;
+      height: 5px;
     }
   }
   &.active a, &.active a:hover {
     border: none !important;
-    color: $cod-grey;
+    color: $cod-grey;    
   }
   &:hover a {
     padding-top: 10px !important; // override nav-tabs behaviour
@@ -225,6 +223,8 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 
 } // End of media queries
 
+
+
 .tab-focus.carousel {
   margin-bottom: 55px !important;
   .item {
@@ -238,6 +238,28 @@ Please be careful about the length of the text in the tabs, the height is fixed.
     bottom: -35px !important;
     li {
       margin: 0 10px;
+      &:nth-child(1) {
+	      background-color: $sinbad;
+	      &.active {
+		      background-color: $sinbad-dark;
+	      }
+      }
+      &:nth-child(2) {
+	      background-color: $shilo;
+	      &.active {
+		      background-color: $shilo-dark;
+	      }
+      }
+      &:nth-child(3) {
+	      background-color: $sapling;
+	      &.active {
+		      background-color: $sapling-dark;
+	      }
+      }
+    }
+    .active {
+	    height: 10px;
+	    width: 10px;
     }
   }
   .carousel-control {
@@ -268,6 +290,10 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 		opacity: 0.94;
 		bottom: 0;
 		margin-left: 12px;
+		@media only screen and (max-width: $screen-sm) {
+			margin-left: 0;
+			position: relative;
+		}
 	}
 }
 
