@@ -10,5 +10,26 @@
  =========================================================== */
 
 header {
-	padding: 0px 0 30px;
+	padding: 0;
+    margin: 0px auto;
+    background: grey;
+    height: 50px;
+    
+    a.brand {
+	    width: 1200px;
+	    margin: 0px auto 0 auto;
+	    display: block;
+	    position: relative;
+	    top: -85px;
+	    z-index: 100;
+	    img {
+		    margin: 0;
+		    float: right;
+		    padding: 0;
+		    border:0;
+	    }
+	    h1 {
+		    visibility: hidden;
+	    }
+    }
 }
