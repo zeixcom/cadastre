@@ -114,53 +114,51 @@
                 <li><a href="#">EN</a></li>
               </ul>
             </nav>
+            
+            <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
+	        <nav class="navbar yamm yamm--select" role="navigation">
+	          <h2 class="sr-only">By Topics</h2>
+	          <ul>
+	            <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
+	            <li class="dropdown pull-right">
+	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themen A-Z <span class="icon icon--bottom"></span></a>
+	              <ul class="dropdown-menu">
+	                <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+	                <li>
+	                  <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+	                  <div class="yamm-content container-fluid">
+	
+	                    <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+	                    <div class="row">
+	                      <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+	                    </div>
+	
+	                  </div><!-- `yamm-content` end -->
+	                </li><!-- Dropdown `li` end -->
+	              </ul><!-- Dropdown `ul` end -->
+	            </li><!-- Navbar item end -->
+	          </ul><!-- Navbar list end -->
+	        </nav><!-- Navbar end -->
+            
             <nav class="nav-service" role="navigation">
               <h2 class="sr-only">Services navigation</h2>
               <ul>
-                <li><a href="#">Emergencies</a></li>
+                <li><a href="#">Page d'accueil</a></li>
                 <li><a href="#">Jobs</a></li>
                 <li><a href="#">Media</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="#">Search</a></li>
               </ul>
             </nav>
           </section>
         </div>
 
         <a href="#" class="brand hidden-xs" title="back to home">
-          <img src="../img/cadastre_logo.jpg" onerror="this.onerror=null; this.src='../img/cadastre_logo.jpg'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+          <img src="../img/cadastre_logo.png" onerror="this.onerror=null; this.src='../img/cadastre_logo.jpg'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
           <h1>Cadastre Design based on Swiss Confederation Web Guidelines</h1>
         </a>
 
-        <form class="form-horizontal form-search pull-right" role="form">
-          <h2 class="sr-only">Search</h2>
-          <label for="search-field" class="sr-only">Search:</label>
-          <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-        </form>
-
-        <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
-        <nav class="navbar yamm yamm--select" role="navigation">
-          <h2 class="sr-only">By Topics</h2>
-          <ul>
-            <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
-            <li class="dropdown pull-right">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themen A-Z <span class="icon icon--bottom"></span></a>
-              <ul class="dropdown-menu">
-                <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
-                <li>
-                  <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
-                  <div class="yamm-content container-fluid">
-
-                    <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
-                    <div class="row">
-                      <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
-                    </div>
-
-                  </div><!-- `yamm-content` end -->
-                </li><!-- Dropdown `li` end -->
-              </ul><!-- Dropdown `ul` end -->
-            </li><!-- Navbar item end -->
-          </ul><!-- Navbar list end -->
-        </nav><!-- Navbar end -->
+        
 
       </header>
     {% endblock %}
@@ -184,9 +182,9 @@
                 <div class="drilldown-container">
                   <nav class="nav-page-list">
                     <ul>
-                      <li><a href="#">Aktuell</a></li>
-                      <li><a href="#">Aussenpolitik</a></li>
-                      <li class="list-sub"><a href="#">Länder- & Reise-informationen</a>
+                      <li><a href="#">Mensuration officiel</a></li>
+                      <li><a href="#">Cadastre RDPPF</a></li>
+                      <li class="list-sub"><a href="#">Registre foncier</a>
                         <!-- sub-list element -->
                         <nav class="drilldown-sub" aria-expanded="false">
                           <a href="#" class="icon icon--before icon--less drilldown-back" aria-hidden="true">Mineral Water</a>
@@ -225,7 +223,7 @@
         <!-- The tab navigation -->
         <ul class="nav navbar-nav" role="navigation">
           <li class="dropdown current yamm-fw">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aktuell <span class="sr-only">current page</span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mensuration officiel <span class="sr-only">current page</span></a>
             <ul class="dropdown-menu" role="menu">
               <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
               <li>
@@ -246,7 +244,7 @@
             </ul><!-- Dropdown `ul` end -->
           </li>
           <li class="dropdown yamm-fw">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aussenpolitik</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastre RDPPF</a>
             <ul class="dropdown-menu" role="menu">
               <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
               <li>
@@ -267,7 +265,7 @@
             </ul><!-- Dropdown `ul` end -->
           </li>
           <li class="dropdown yamm-fw">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Länder- & Reise-informationen</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registre foncier</a>
             <ul class="dropdown-menu" role="menu">
               <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
               <li>
@@ -288,7 +286,7 @@
             </ul><!-- Dropdown `ul` end -->
           </li>
           <li class="dropdown yamm-fw">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Leben im Ausland</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">A propos de cadastre.ch</a>
             <ul class="dropdown-menu" role="menu">
               <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
               <li>
@@ -309,7 +307,7 @@
             </ul><!-- Dropdown `ul` end -->
           </li>
           <li class="dropdown yamm-fw">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Einreise & Aufenthalt in der Schweiz</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services & publications</a>
             <ul class="dropdown-menu" role="menu">
               <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
               <li>
@@ -330,7 +328,7 @@
             </ul><!-- Dropdown `ul` end -->
           </li>
           <li class="dropdown yamm-fw">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Publikationen & Service</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Actualitè</a>
             <ul class="dropdown-menu" role="menu">
               <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
               <li>
@@ -351,7 +349,7 @@
             </ul><!-- Dropdown `ul` end -->
           </li>
           <li class="dropdown yamm-fw">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Über uns</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guide pour les professionnels</a>
             <ul class="dropdown-menu" role="menu">
               <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
               <li>
