@@ -29,10 +29,10 @@ h1 {
 // TODO: prefix with class for Teaser-Component
 
 div[class*=col-sm-] > h3:first-child {
-	margin-top: 0;	
+	margin-top: 10px;	
 }
 div[class*=col-sm-] > img:nth-child(2) {
-	margin-bottom: 24px;	
+	margin-bottom: 14px;	
 }
 
 
