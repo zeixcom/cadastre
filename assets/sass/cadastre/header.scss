@@ -20,7 +20,7 @@ header {
 	    margin: 0px auto 0 auto;
 	    display: block;
 	    position: relative;
-	    top: -85px;
+	    top: 25px;
 	    z-index: 100;
 	    img {
 		    margin: 0;
@@ -29,7 +29,24 @@ header {
 		    border:0;
 	    }
 	    h1 {
-		    visibility: hidden;
+		    position: absolute;
+		    width: 1px;
+		    height: 1px;
+		    margin: -1px;
+		    padding: 0;
+		    overflow: hidden;
+		    clip: rect(0,0,0,0);
+		    border: 0;
 	    }
+	    
+	    //   min-width:1024px
+		@media only screen and (min-width: $screen-md) {
+			width: $container-desktop;//940px
+		}	
+		//   min-width:1280px
+		@media only screen and (min-width: $screen-lg) {
+			width: $container-large-desktop;//1200px
+		}	
+	    
     }
 }
