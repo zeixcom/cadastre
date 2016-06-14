@@ -24,7 +24,7 @@
 .container-fluid {
 	
 //   width: 1200px;
-  margin:0 auto;
+  	margin:0 auto;
   	box-shadow: 24px 0 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
 
 	background: $bg-container; 
@@ -43,11 +43,13 @@
 
 //   min-width:1024px
 	@media only screen and (min-width: $screen-md) {
-		width: $container-desktop;//940px
+		width: $container-desktop + ($grid-gutter-width * 2);//940 + 48px
+		padding: 65px $grid-gutter-width;
 	}	
 //   min-width:1280px
   @media only screen and (min-width: $screen-lg) {
-		width: $container-large-desktop;//1200px
+		width: $container-large-desktop + ($grid-gutter-width * 2) ;//1200 +48px
+		padding: 65px $grid-gutter-width;
 	}	
 	
   

@@ -35,19 +35,36 @@
 	   >li {
 		   border-right:0;
 		   position: relative;
-		   top:42px;
+		   top:46px;
+		   background-color: $gainsboro;
+		   margin-left: 0;
 		   
 		   &:nth-child(1), &:nth-child(2), &:nth-child(3) {
 			   position: relative;
 			   top:0px;
+			   &.current>a {
+				   padding-top:18px;
+			   }
 		   }
 		   &:nth-child(1) a, &:nth-child(2) a, &:nth-child(3) a {
 			   padding:30px 30px 30px 30px;
 			   font-size: 1.5em;
 			   max-width: 190px;
+			   height: 100%;
+			   &:hover {
+	   			   padding-top:18px;
+	   			   background-color: $gainsboro;
+			   }	
+			   //   min-width:768px
+			   	@media only screen and (min-width: $screen-sm) {
+			   			padding:15px;
+			   			font-size: 1em;
+			   			max-width: 120px;			   
+					}
+			   
 			   
 			   	//   min-width:1024px
-					@media only screen and (min-width: $screen-md) {
+					@media only screen and (min-width: $screen-md) and (max-width: $screen-lg) {
 						padding: 30px 10px;
 						font-size: 1.1em;
 						max-width:120px;
@@ -78,14 +95,17 @@
 			   a:hover{
 				   border-top:12px solid $sapling-dark;				   
 			   }
-			   margin-right:20px;
-			   
+			   margin-right:30px;
+			   //   min-width:768px
+			   		@media only screen and (min-width: $screen-sm) {
+				   	margin-right: 0;
+			   	}
 			   //   min-width:1024px
-					@media only screen and (min-width: $screen-md) {
+					@media only screen and (min-width: $screen-md) and (max-width: $screen-lg) {
 					margin-right: 0;
 					}	
 				//   min-width:1280px
-				  @media only screen and (min-width: $screen-lg) {
+				  	@media only screen and (min-width: $screen-lg) {
 						
 					}
 			   
@@ -94,7 +114,8 @@
 		   &:nth-child(7){
 			   float: right;
 			   margin-left: 10px;
-			   
+			   background-color: $very-dark-grey;
+			   width:165px;
 			   	//   min-width:1024px
 					@media only screen and (min-width: $screen-md) {
 					margin-left: 0;
@@ -103,51 +124,136 @@
 				  @media only screen and (min-width: $screen-lg) {
 						
 					}
-			   
+				a {
+				   color:$white;
+				   background-color: $very-dark-grey;
+				   max-width: 165px;
+				   text-align: left;
+				    &:visited, &:focus {
+					   color:$white;
+					   background-color: $very-dark-grey; 
+				   	}
+				   	&:hover {
+					  background-color: $empress; 
+				   }
+				}
 			   			  
 		   }
 		   a {
 			   font-size: 1.15em;
 			   max-width:160px;
-			   background: none;
-			   height: 100%;
+			   background: none;			   
 			   padding:15px 20px;
 			   text-align: center;
 			   
+			    &:after {
+			 		content: none;
+    			}
+				&:hover, &:visited, &:focus {
+
+				color:$coal;
+				background: none;
+				box-shadow: none;
+				background-color: $silver;
+			   }
+			   //   min-width:768px
+			   	@media only screen and (min-width: $screen-sm) {
+			   		font-size: 1em;
+			   		max-width:120px;
+			   		padding:10px 10px;			   
+					}
+			   
 			   //   min-width:1024px
-					@media only screen and (min-width: $screen-md) {
+				@media only screen and (min-width: $screen-md) {
 					font-size: 1em;
 					max-width:150px;
 					}	
 				//   min-width:1280px
-				  @media only screen and (min-width: $screen-lg) {
+				@media only screen and (min-width: $screen-lg) {
 						
 					}
-			   
+			
+		   }		   
+
+		   &.dropdown  {
+			   a:after {
+		        content: ',';
+		        font-family: $admin-icons;
+		        position: absolute;
+		        bottom: 24px;
+		        left: 0;
+		        width: 100%;
+		        text-align: right;
+		        color: $white;
+		        font-size: 0.9em;
+		        padding-right: 15px;
+		      }
+		      &.open > a {
+			    
+			    background: transparent;
+			    border-top: 0;
+			    margin-top: 0;
+			    height: auto;
+			    &:hover, a:visited, &:focus {
+			      background: none;
+			    }
+			    &:after {
+			      content: ';';
+			    }
+			  }
+  
+			.dropdown-menu {
+				background-color: transparent;
+				box-shadow: none;
+				width: 940px;
+				left:auto;
+				padding-top: 0;
+				
+						.container-fluid {
+						width: auto;
+						background: none;
+						background-color: $very-dark-grey;
+						box-shadow: none;
+						color:$white;
+						.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+							color:$white;
+						}
+					}
+
+				}  
 		   }
-		   a:hover {
-			   padding-top:18px;
-			   color:$coal;
-			   background: transparent;
-		   }
-		   a:after {
-			   content: none;
-		   }
-		
-	      
+		   
+		   //   min-width:768px
+			   	@media only screen and (min-width: $screen-sm) {
+				   	top:0;
+			}
+		   	//   min-width:1024px
+			@media only screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+				top:32px;
+			}
+		   
+		   
+		   	      
 	   }
+	   
+	   
+
+	   
+	   
 	   .current> a {
 		   height: 100%;
 		   
 	   }
-	   .dropdown.current> a {
+	   .current> a {
 		background: none;
 		height: 100%;
 		margin-top: 0;
 		padding-top:18px;		
 		}
-		
-		
+		//   min-width:768px
+		@media only screen and (min-width: $screen-sm) {
+			width: $container-tablet;//768px
+			}
 		//   min-width:1024px
 			@media only screen and (min-width: $screen-md) {
 				width: $container-desktop;//940px
@@ -168,9 +274,11 @@
   float: left;
   li {
     margin-left: 2.8em;
-	&:nth-child(1) {
-		margin-right: 100px; 
+ 
+ 	&:nth-child(1) {
+		margin-right: 100px;
 	}
+	
     a {
       color: $nav-color;
 	  font-size: 1em;
@@ -179,6 +287,17 @@
       }
     }
   }
+  //   min-width:768px
+		@media only screen and (min-width: $screen-sm) {
+			li {
+				margin-left: 2em;
+				&:nth-child(1) {
+					margin-right: 0px;
+				}
+			}	
+		} 
+  
+  
 }
 
 .nav-services {
@@ -190,6 +309,32 @@
   padding-top: ($grid-gutter-width / 2);
   font-size: $font-size-small;
   
+  .dropdown-menu {
+	background-color: transparent;
+	box-shadow: none;
+	width: 1200px;
+	left:auto;
+	padding-top: 0;
+	
+			.container-fluid {
+			width: auto;
+			background: none;
+			background-color: $white;
+			box-shadow: none;
+			color:$night-rider;
+			position: relative;
+			left:162px;
+			.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+				color:$night-rider;
+			}
+		}
+
+	} 
+  
+	  //   min-width:768px
+		@media only screen and (min-width: $screen-sm) {
+			width: $container-tablet;//768px
+		}
 	  //   min-width:1024px
 		@media only screen and (min-width: $screen-md) {
 			width: $container-desktop;//940px
@@ -242,7 +387,7 @@
   width:100%;
   border-top:0;
   position: relative;
-
+  border-bottom: 1px solid $white;
   .yamm--select {
 	  position: relative;
 	  top:0;
