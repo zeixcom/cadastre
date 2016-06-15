@@ -42,7 +42,7 @@
   $('.dropdown').on('show.bs.dropdown', function () {
     $dropdown.removeClass('open');
     $yamm.removeClass('nav-open');
-    $(this).parents($yamm).addClass('nav-open');
+    $(this).parent($yamm).addClass('nav-open');
   });
 
   $dropdown.on('hide.bs.dropdown', function () {
