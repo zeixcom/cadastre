@@ -55,11 +55,12 @@
 	   			   padding-top:18px;
 	   			   background-color: $gainsboro;
 			   }	
-			   //   min-width:768px
-			   	@media only screen and (min-width: $screen-sm) {
-			   			padding:15px;
+			   //   min-width:1023px
+			   		@media only screen and (max-width: $screen-sm-max) {
+				   		padding:30px 15px 15px 15px;
 			   			font-size: 1em;
-			   			max-width: 120px;			   
+			   			max-width: 120px;
+			   			height: 110px;			   
 					}
 			   
 			   
@@ -96,9 +97,10 @@
 				   border-top:12px solid $sapling-dark;				   
 			   }
 			   margin-right:30px;
-			   //   min-width:768px
-			   		@media only screen and (min-width: $screen-sm) {
-				   	margin-right: 0;
+			   //   min-width:1023px
+			   		@media only screen and (max-width: $screen-sm-max) {
+				   	margin-right: 5%;
+				   	
 			   	}
 			   //   min-width:1024px
 					@media only screen and (min-width: $screen-md) and (max-width: $screen-lg) {
@@ -116,6 +118,12 @@
 			   margin-left: 10px;
 			   background-color: $very-dark-grey;
 			   width:165px;
+			   	 //   max-width:1023px
+			   		@media only screen and (max-width: $screen-sm-max) {
+				   	width: 260px;
+				   	top:15px;
+			   	}
+			   	
 			   	//   min-width:1024px
 					@media only screen and (min-width: $screen-md) {
 					margin-left: 0;
@@ -124,6 +132,9 @@
 				  @media only screen and (min-width: $screen-lg) {
 						
 					}
+				
+				
+				
 				a {
 				   color:$white;
 				   background-color: $very-dark-grey;
@@ -136,6 +147,11 @@
 				   	&:hover {
 					  background-color: $empress; 
 				   }
+				   //   max-width:1023px
+			   		@media only screen and (max-width: $screen-sm-max) {
+				   	   	max-width: 265px;
+				   	   	height: 40px;					
+				   	}
 				}
 			   			  
 		   }
@@ -145,7 +161,7 @@
 			   background: none;			   
 			   padding:15px 20px;
 			   text-align: center;
-			   
+			   height: 55px;
 			    &:after {
 			 		content: none;
     			}
@@ -156,10 +172,10 @@
 				box-shadow: none;
 				background-color: $silver;
 			   }
-			   //   min-width:768px
-			   	@media only screen and (min-width: $screen-sm) {
+			   //   min-width:1023px
+			   		@media only screen and (max-width: $screen-sm-max) {
 			   		font-size: 1em;
-			   		max-width:120px;
+			   		max-width:130px;
 			   		padding:10px 10px;			   
 					}
 			   
@@ -167,6 +183,7 @@
 				@media only screen and (min-width: $screen-md) {
 					font-size: 1em;
 					max-width:150px;
+					height: 70px;
 					}	
 				//   min-width:1280px
 				@media only screen and (min-width: $screen-lg) {
@@ -176,7 +193,7 @@
 		   }		   
 
 		   &.dropdown  {
-			   a:after {
+			   a.dropdown-toggle:after {
 		        content: ',';
 		        font-family: $admin-icons;
 		        position: absolute;
@@ -187,6 +204,10 @@
 		        color: $white;
 		        font-size: 0.9em;
 		        padding-right: 15px;
+		        //   max-width:1023px
+			   		@media only screen and (max-width: $screen-sm-max) {
+				   		bottom: 13px;
+				   		}
 		      }
 		      &.open > a {
 			    
@@ -194,7 +215,7 @@
 			    border-top: 0;
 			    margin-top: 0;
 			    height: auto;
-			    &:hover, a:visited, &:focus {
+			    &:hover, &:visited, &:focus {
 			      background: none;
 			    }
 			    &:after {
@@ -205,7 +226,7 @@
 			.dropdown-menu {
 				background-color: transparent;
 				box-shadow: none;
-				width: 940px;
+				min-width: 300px;
 				left:auto;
 				padding-top: 0;
 				
@@ -218,17 +239,23 @@
 						.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 							color:$white;
 						}
+						li a{
+						display: inline-block;
+						height: 100%;
+		    			max-width: 100%;
+						padding:15px 0 0px 0;
+						}
 					}
 
 				}  
 		   }
 		   
-		   //   min-width:768px
-			   	@media only screen and (min-width: $screen-sm) {
+		   //   min-width:1023px
+			   		@media only screen and (max-width: $screen-sm-max) {
 				   	top:0;
 			}
 		   	//   min-width:1024px
-			@media only screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+			@media only screen and (min-width: $screen-md) and (max-width: $screen-md-max) {
 				top:32px;
 			}
 		   
@@ -301,7 +328,8 @@
 }
 
 .nav-services {
-	
+  position: relative;
+  z-index: 999;	
   width: 1200px;
   margin: 0 auto;		
 	
@@ -327,8 +355,9 @@
 			.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 				color:$night-rider;
 			}
+			
 		}
-
+		
 	} 
   
 	  //   min-width:768px
