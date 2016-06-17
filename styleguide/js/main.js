@@ -126,6 +126,7 @@ function disableControl(element) {
     element.find('.right').removeClass('disabled').attr('aria-disabled', 'false');
   }
 }
+
 /* ==========================================================
  * collapse.js
  * Add class when nav collapse is open
@@ -247,6 +248,28 @@ function disableControl(element) {
 
   });
  }) (jQuery);
+/* ==========================================================
+
+ ========================================================== */
+
+
+$(document).ready(function() {
+	
+	var calcParallaxBackHeight = function() {
+	    var containerHeight = $('.container-fluid.parallax-layer').outerHeight(),
+	    	headerHeight = 257,
+	    	backHeight = containerHeight - headerHeight;
+	    $('.container-back').css('height', backHeight + 'px' );
+    };
+    
+    calcParallaxBackHeight();
+    
+    $(window).on('resize', function() {
+	   calcParallaxBackHeight(); 
+    });
+
+    
+});
 /* ==========================================================
  * print.js
  * Add print preview windows
