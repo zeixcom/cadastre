@@ -107,17 +107,23 @@ $hr-grey:                                     #dbdbdb;
 $nav-color:                                   #fbfbfb;
 $bt-border-color:                             #969696;
 
-$sinbad:									  #9cd2d2;
-$shilo:									      #e4b5a8;
-$sapling:									  #e1d1a8;
+$sinbad:									  #9cd2d2;// level 2
+$sinbad-medium:								  #bae0e0;// level 3+4
+$sinbad-dark:								  #008383;// level 2 active
+$sinbad-hover:								  #80c5c5;// hover
+$sinbad-active:								  #006b6a;// level 3 active
 
-$sinbad-medium:								  #bae0e0;
-$shilo-medium:							      #993333;
-$sapling-medium:							  #705a26;
+$shilo:									      #e4b5a8; // level 2
+$shilo-medium:							      #e9c4b9; // level 3+4
+$shilo-dark:							      #b34444; // level 2 active
+$shilo-hover:								  #e1a798; // hover
+$shilo-active:								  #993333; // level 3 active
 
-$sinbad-dark:								  #008383;
-$shilo-dark:							      #b34444;
-$sapling-dark:								  #8c7030;
+$sapling:									  #e1d1a8;// level 2
+$sapling-medium:							  #e7dab9;// level 3+4
+$sapling-dark:								  #8c7030;// level 2 active
+$sapling-hover:								  #ddca98;// hover
+$sapling-active:							  #705a26;// level 3 active
 
 // TYPOGRAPHY
 //=============================================================================
