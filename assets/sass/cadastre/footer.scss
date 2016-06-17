@@ -38,9 +38,10 @@ footer {
   }
   
   .container-fluid {
-    max-width: $container-large-desktop;
+    max-width: $container-large-desktop + ($grid-gutter-width * 2);
     margin: 0 auto;
-    
+    background: $night-rider;
+    box-shadow: none;
     @media only screen and (max-width: $screen-md-max) {
       max-width: $container-desktop;
     }
@@ -87,7 +88,7 @@ address {
 
 .site-map {
   display: block;
-  max-width: $container-large-desktop;
+  max-width: $container-large-desktop + ($grid-gutter-width * 2);
   margin: 0 auto;
   background: transparent;
   border: 0;
