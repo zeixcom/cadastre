@@ -8,26 +8,27 @@
  * Copyright 2016 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
-.container {
-	width: 100%;
-/*
-	@media only screen and (max-width: $screen-md) {
-		width: $container-desktop;
-	}
+body {
+
+	background: none;
+/*	perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 */
 }
 
-.container-main {
-	background: transparent url('../img/back-image.gif') 0 0 no-repeat;
+.parallax {
+	background: none;
+	perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.container-fluid {
-	
-//   width: 1200px;
-  	margin:0 auto;
-  	box-shadow: 24px 0 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
-
-	background: $bg-container; 
+.container {
+	width: 1248px;
+	margin-bottom: 0;
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VjZmFmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
 	background: -moz-linear-gradient(top,  $bg-container 0%, $white 800px); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$bg-container), color-stop(800px, $white)); 
@@ -37,19 +38,85 @@
 	background: linear-gradient(to bottom,  $bg-container 0%, $white 800px); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#ffffff',GradientType=0 ); 
 	
+	background-position-y: 255px;
+
+
+		//   max-width:786px
+	   		@media only screen and (max-width: $screen-sm-max) {
+		   		width:$container-tablet;		   
+			}
+	   	//   min-width:1024px
+			@media only screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+				width:$container-desktop;
+			}	
+		//   min-width:1280px
+		  @media only screen and (min-width: $screen-lg) {
+				
+			}
+
+}
+
+.container-main {
+   box-shadow: none;
+   
+   > .container-fluid:first-of-type {
+	  margin: 255px auto 0 auto;
+  }
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  
+}
+
+.container-parallax {
+	transform: translateZ(0);
+}
+
+.container-fluid {
 	
-  padding:65px 0 0 0;
+//   width: 1200px;
+	
+// 	transform: translateZ(0);
+
+	position: relative;
+	z-index: 1;
+  	margin:0 auto;
+
+
+// 	background: $bg-container; 
+	box-shadow: 24px 0 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
+/*
+	  	box-shadow: 24px 0 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VjZmFmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top,  $bg-container 0%, $white 800px); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$bg-container), color-stop(800px, $white)); 
+	background: -webkit-linear-gradient(top,  $bg-container 0%, $white 800px); 
+	background: -o-linear-gradient(top,  $bg-container 0%, $white 800px); 
+	background: -ms-linear-gradient(top,  $bg-container 0%, $white 800px); 
+	background: linear-gradient(to bottom,  $bg-container 0%, $white 800px); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#ffffff',GradientType=0 ); 
+*/
+	
+	
+  padding:21px 0 0 0;
+  
   
 
 //   min-width:1024px
 	@media only screen and (min-width: $screen-md) {
-		width: $container-desktop + ($grid-gutter-width * 2);//940 + 48px
-		padding: 65px $grid-gutter-width;
+		width: $container-desktop;//940 + 48px
+		padding: 21px $grid-gutter-width 0;
 	}	
 //   min-width:1280px
   @media only screen and (min-width: $screen-lg) {
 		width: $container-large-desktop + ($grid-gutter-width * 2) ;//1200 +48px
-		padding: 65px $grid-gutter-width;
+		padding: 21px $grid-gutter-width 0;
 	}	
 	
   
@@ -57,6 +124,34 @@
     padding-left: ($grid-gutter-width / 2);
     padding-right: ($grid-gutter-width / 2);
   }
+  
+  &.parallax-layer {
+	  margin:0;
+  }
+  
+ 
+
+}
+
+
+.container-back {
+	background: transparent url('../img/back-image.gif') 0 505px no-repeat;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transform: translateZ(-1px) scale(2);
+	top: 0px;
+	z-index: -1;
+	@media only screen and (max-width: $screen-sm-max) {
+		display: none;				   	
+   	}
+}
+
+
+
+
+p {
+	max-width: 43em;
 }
 
 hr { 
