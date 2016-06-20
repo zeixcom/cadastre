@@ -2,7 +2,7 @@
 
 {% block pagetitle %}Details{% endblock %}
 
-{% block main_class %}container-main--nav-av{% endblock %}
+{% block main_class %}nav-branch--av{% endblock %}
 
 {% block content_columns %}col-sm-8 col-md-8{% endblock %}
 
@@ -49,6 +49,32 @@
 </ul>
 {% endblock mainnavigation %}
 
+{% block sidebar %}
+  <div class="col-sm-4 col-md-3 drilldown">
+    <a href="#collapseSubNav" data-toggle="collapse" class="collapsed visible-xs">Sub-Navigation</a>
+    <div class="drilldown-container">
+      <nav class="nav-page-list" role="navigation">
+        <a href="#" class="icon icon--before icon--arrow-left visible-xs">Back to parent</a>
+        <a href="#" class="icon icon--before icon--arrow-left"><span class="sr-only">Back to </span>Startseite</a>
+        <ul>
+          <!-- the .list-emphasis class is optionnal -->
+          <li class="list-emphasis">
+            <a href="#">Mensuration officiel</a>
+            <ul>
+              <!-- add the .list-sub class if the list has some animated sub-lists -->
+              <li><a href="#">Ziel und Arbeitsweise</a></li>
+              <li class="active" aria-selected="true"><span>Nutzen &amp; Ergebnisse<span class="sr-only"> active</span></span></li>
+              <li><a href="#">Aktueller Stand</a></li>
+              <li><a href="#">Methoden und Modelle</a></li>
+            </ul>
+            <li><a href="#">Guide Mensuration officiel</a></li>
+          </li>
+        </ul>
+        <img src="../img/logo-av-schweiz.png" alt="Logo Amtliche Vermessung Schweiz" />
+      </nav>
+    </div>
+  </div>
+{% endblock %}
 
 {% block content %}
   <div class="col-md-12">
