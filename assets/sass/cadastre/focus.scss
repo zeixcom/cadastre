@@ -109,12 +109,21 @@ Please be careful about the length of the text in the tabs, the height is fixed.
   border-left: 1px solid transparent;
   border-bottom: none !important;
   position: relative;
+  border-top:1px solid $white;
+  
+
+  
   .oldie &,
   .ie9 & {
     width: 1%;
     a {height: 69px;}
   }
   &:nth-child(1) {
+	
+	&.active {
+		border-top:1px solid $sinbad;
+  	}
+  	
 	  a {
 		background-color: $sinbad;
 		&:after {
@@ -123,10 +132,13 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	  }
 	  a:hover,
 	  .active a {
-	  	border-bottom: 5px solid $sinbad-dark;	  	
+	  	border-bottom: 5px solid $sinbad-dark;
 	  }
   }
   &:nth-child(2) {
+	&.active {
+		border-top:1px solid $shilo;
+  	}
 	   a {
 		background-color: $shilo;
 		&:after {
@@ -135,11 +147,13 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	  }
 	  a:hover,
 	  .active a {
-	  	border-bottom: 5px solid $shilo-dark;  	
-	  }	  
+	  	border-bottom: 5px solid $shilo-dark;
+	  }
   }
   &:nth-child(3) {
-	  
+	 &.active {
+		border-top:1px solid $sapling;
+  	} 
 	  a {
 		background-color: $sapling;
 		&:after {
@@ -148,7 +162,7 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	  }
 	  a:hover,
 	  .active a {
-	  	border-bottom: 5px solid $sapling-dark;  	
+	  	border-bottom: 5px solid $sapling-dark;
 	  }	
   }
   
@@ -170,7 +184,7 @@ Please be careful about the length of the text in the tabs, the height is fixed.
     border-radius: 0;
     color: $night-rider;
     overflow: hidden;
-    border-top:1px solid white;
+    
     &:after {
       content: '';
       height: 0;
@@ -182,21 +196,21 @@ Please be careful about the length of the text in the tabs, the height is fixed.
       background: $silver;
     }
   }
-  &.active a, &.active:hover a {
+  &.active a, 
+  &.active:hover a {
     padding-bottom: 10px !important;
-    border-top:1px solid blue;
   }
 	a:hover {
 		height: 5px;
-	} 
-	&.active a  {
-    border: none;
-    color: $cod-grey;
-    
-    &:after {
-      height: 5px;
-    }
-  }
+  } 
+  &.active a  {
+	border: none;
+	color: $cod-grey;
+	
+	&:after {
+	  height: 5px;
+	}
+   }
   &.active a, &.active a:hover {
     border: none !important;
     color: $cod-grey;    
@@ -204,6 +218,9 @@ Please be careful about the length of the text in the tabs, the height is fixed.
   &:hover a {
     padding-top: 10px !important; // override nav-tabs behaviour
   }
+  
+  
+
 }
 
 .tab-content.tab-focus {
