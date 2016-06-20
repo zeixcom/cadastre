@@ -87,26 +87,26 @@
 
 
 // Amtliche Vermessung / Mensuration officiel
-.container-main--nav-av {
+.nav-branch--av{
 	.nav-tabs li.active, .nav-tabs li.active:hover, .nav-tabs li:hover{
 	 border-top: 5px solid $sinbad-dark;
 	}
 }
 // ÖREB-Kataster / Cadastre RDPPF
-.container-main--nav-oereb {
+.nav-branch--oereb {
 	.nav-tabs li.active, .nav-tabs li.active:hover, .nav-tabs li:hover{
 	 border-top: 5px solid $shilo-dark;
 	}
 }
 // Grundbuch / Registre foncier
-.container-main--nav-gb {
+.nav-branch--gb {
 	.nav-tabs li.active, .nav-tabs li.active:hover, .nav-tabs li:hover{
 	 border-top: 5px solid $sapling-dark;
 	}
 }
-.container-main--nav-av,
-.container-main--nav-oereb,
-.container-main--nav-gb {
+.nav-branch--av,
+.nav-branch--oereb,
+.nav-branch--gb {
 	.nav-tabs li.active:hover a, .nav-tabs li.active a {
 	padding-top: 5px!important;
 	padding-bottom: 11px!important;

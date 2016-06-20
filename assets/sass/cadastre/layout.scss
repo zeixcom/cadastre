@@ -56,7 +56,7 @@ body {
    box-shadow: none;
    
    > .container-fluid:first-of-type {
-	  margin: 208px auto 0 auto;
+	  margin: 234px auto 0 auto;
   }
 }
 
@@ -78,7 +78,7 @@ body {
 	z-index: 1;
   	margin:0 auto;
 	box-shadow: 24px 0 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
-	padding: 26px $grid-gutter-width 0;
+	padding: 0px $grid-gutter-width 0;
 	
 	// 	max : 1279
 	@media only screen and (max-width: $screen-md-max) {
@@ -129,7 +129,7 @@ body {
 
 
 .container-back {
-	background: transparent url('../img/back-image.gif') 0 505px no-repeat;
+// 	background: transparent url('../img/back-image.gif') 0 505px no-repeat;
 	position: absolute;
 	height: 100%;
 	width: 100%;
