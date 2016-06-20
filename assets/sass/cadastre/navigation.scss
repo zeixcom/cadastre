@@ -533,17 +533,17 @@
 			border-bottom: 0;
 		}
 	}
-	.list-emphasis > a {
+	li.list-emphasis > a {
 		background: $very-dark-grey;
 		border-bottom: 1px solid $white;
 		padding-left:12px;
 		color:$white;
 	}
-  ul {
+	ul {
 		color: $night-rider;
 		
 		li {
-			padding-left:24px;
+			padding-left:12px;
 			background: $gainsboro;
 			border-bottom: 1px solid $white;
 			&:hover {
@@ -551,6 +551,9 @@
 			}
 			a {
 				color:$night-rider;
+			}
+			ul li {
+				padding-left: 24px;
 			}
 		}
 		li.active {
@@ -601,11 +604,10 @@
 
 //AMTLICHE VERMESSUNG
 .nav-branch--av {
-  .nav-page-list {
+  	.nav-page-list {
 		li {
-		  background-color: $sinbad-medium;
-		  
-		  &:hover {
+		  	background-color: $sinbad-medium;
+		  	&:hover {
 				background: $sinbad-hover;
 		  }
 		}
@@ -630,17 +632,20 @@
 }
 
 //KATASTER
-/* .nav-branch--oereb {
-		.nav-page-list {
-			li {
-				background-color: $shilo-medium;
-				&:hover {
-					background: $shilo-hover;
-				}
+.nav-branch--oereb {
+	.nav-page-list {
+		li {
+			background-color: $shilo-medium;
+			&:hover {
+				background: $shilo-hover;
 			}
-		li.list-emphasis>:first-child {
-		  background: $shilo-active;
 		}
+	> ul > li:last-child {
+   		background-color: $light-grey;
+	}
+	.list-emphasis> a {
+	  background: $shilo-active;
+	}
 		ul {
 			li {
 				background: $shilo-medium;
@@ -657,17 +662,22 @@
 
 //GRUNDBUCH
 .nav-branch--gb {
-		.nav-page-list {
-			li {
-				background-color: $sapling-medium;
-				&:hover {
-					background: $sapling-hover;
-				}
+	.nav-page-list {
+		li {
+			background-color: $sapling-medium;
+			&:hover {
+				background: $sapling-hover;
 			}
-		li.list-emphasis>:first-child {
-		  background: $sapling-active;
 		}
-		li.list-emphasis ul {
+/*
+	> ul > li:last-child {
+   		background-color: $light-grey;
+	}
+*/
+	.list-emphasis > a {
+	  background: $sapling-active;
+	}
+		ul {
 			li {
 				background: $sapling-medium;
 				&:hover {
@@ -679,7 +689,7 @@
 			}
 		}
 	}
-} */
+}
 
 
 .nav-mobile {
