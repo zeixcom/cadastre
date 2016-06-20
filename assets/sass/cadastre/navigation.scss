@@ -32,40 +32,68 @@
 	   width: $container-large-desktop + $grid-gutter-width*2;
 	   margin: 0px auto 0 auto;
 	   float: none;
-	   padding: 133px 0 0 0;
+	   padding: 86px 0 0 0;
 	   
 	   // 	max : 1279
 		@media only screen and (max-width: $screen-md-max) {
 		    max-width: $container-desktop;
-		    padding-top:147px;
+		    padding-top:100px;
 		}
 		// 	max : 1023  
 		@media only screen and (max-width: $screen-sm-max) {
 		    max-width: $container-tablet;
-		    padding-top:139px;
+		    padding-top:92px;
 		}
  
 	   >li {
 		   border-right:0;
 		   position: relative;
-		   top:46px;
+		   top:57px;
 		   background-color: $gainsboro;
 		   margin-left: 0;
 		   
 		    // 	max : 1279
 			@media only screen and (max-width: $screen-md-max) {
-			    top:32px;
+			    top:42px;
 			}
 			// 	max : 1023  
 			@media only screen and (max-width: $screen-sm-max) {
 			    	top:0;
 			}
 		   
+		   &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+			   &.current>a {
+				   height:60px;
+				   padding-top:10px;
+				   background: none;
+				   // 	max : 1279
+					@media only screen and (max-width: $screen-md-max) {
+					    height:61px;
+					}
+					// 	max : 1023  
+					@media only screen and (max-width: $screen-sm-max) {
+					     height:55px;
+					     background: $silver;
+					}
+					
+			   }
+		   }
+		   
+		   
 		   &:nth-child(1), &:nth-child(2), &:nth-child(3) {
 			   position: relative;
 			   top:0px;
 			   &.current>a {
 				   padding-top:18px;
+				   border-bottom: 1px solid $gainsboro;
+				   // 	max : 1279
+					@media only screen and (max-width: $screen-md-max) {
+				   		height: 103px;	
+					}
+					// 	max : 1023  
+					@media only screen and (max-width: $screen-sm-max) {
+						height: 111px;
+					}
 			   }
 		   }
 		   &:nth-child(1) a, &:nth-child(2) a, &:nth-child(3) a {
@@ -75,7 +103,7 @@
 			   height: 100%;
 			   &:hover {
 	   			   padding-top:18px;
-	   			   background-color: $gainsboro;
+	   			   background-color: $gainsboro;	   			   
 			   }	
 			   
 			   // 	max : 1279
@@ -104,6 +132,7 @@
 			   &.current>a {
 				   border-top:12px solid $sinbad-dark;
 				   background-color: $gainsboro;
+				   
 			   } 			   			  
 		   }
 		   &:nth-child(2){
@@ -118,7 +147,7 @@
 			   }			   			  
 		   }
 		   &:nth-child(3){
-			   margin-right:48px;
+			   margin-right:66px;
 			   background-color:$sapling;
 			   a:hover{
 				   border-top:12px solid $sapling-dark;
@@ -174,12 +203,12 @@
 			   			  
 		   }
 		   a {
-			   font-size: 1.15em;
+			   font-size: 1em;
 			   max-width:160px;
 			   background: none;			   
-			   padding:15px 20px;
+			   padding:10px 20px;
 			   text-align: center;
-			   height: 70px;
+			   height: 59px;
 			    &:after {
 			 		content: none;
     			}
@@ -194,7 +223,7 @@
 				@media only screen and (max-width: $screen-md-max) {
 				    font-size: 1em;
 					max-width:150px;
-					height: 70px;
+					height: 60px;
 				}
 				// 	max : 1023  
 				@media only screen and (max-width: $screen-sm-max) {
@@ -442,7 +471,7 @@
 
 .navbar {
   	position: absolute;
-    height: 255px;
+    height: 208px;
     top: 0px;
     border-bottom: 1px solid $white;
 	margin:0;

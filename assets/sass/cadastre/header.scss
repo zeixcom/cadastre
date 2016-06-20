@@ -53,11 +53,15 @@ header {
 		    padding: 0;
 		    border:0;
 		    position: relative;
-			top: 45px;
+			top: 25px;
 			z-index: 100;
 		    left:0px;
 			@media only screen and (max-width: $screen-sm-max) {
-			    top:20px;
+			    top:13px;
+			}
+			// 	max : 1023  
+			@media only screen and (max-width: $screen-sm-max) {
+		    	max-width: 170px;
 			}
     	}
 	    	
