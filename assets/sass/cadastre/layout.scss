@@ -40,20 +40,16 @@ body {
 	
 	background-position-y: 255px;
 
-
-		//   max-width:786px
-	   		@media only screen and (max-width: $screen-sm-max) {
-		   		width:$container-tablet;		   
-			}
-	   	//   min-width:1024px
-			@media only screen and (min-width: $screen-md) and (max-width: $screen-lg) {
-				width:$container-desktop;
-			}	
-		//   min-width:1280px
-		  @media only screen and (min-width: $screen-lg) {
-				
-			}
-
+		@media only screen and (max-width: $screen-md-max) {
+		    width: $container-desktop;
+		}
+		@media only screen and (max-width: $screen-sm-max) {
+		    width: $container-tablet;		    
+		}
+		@media only screen and (max-width: $screen-xs-max) {
+		    background-position-y: 110px;	
+		    max-width: 100%;	    
+		}
 }
 
 .container-main {
@@ -93,13 +89,26 @@ body {
 	@media only screen and (max-width: $screen-sm-max) {
 	    	 padding-left: ($grid-gutter-width / 2);
 			 padding-right: ($grid-gutter-width / 2);
-			 max-width: $container-tablet;
+			 max-width: $container-tablet;			 
+	}
+	@media only screen and (max-width: $screen-xs-max) {
+		margin-top: 105px;
+		box-shadow: none;
+		max-width: 100%;
 	}
 	&.parallax-layer {
 		margin:0;
   	}
-  	
-  	
+  	.drilldown {
+	  	@media only screen and (max-width: $screen-xs-max) {
+			position: absolute;
+			bottom: 0;
+			margin:30px auto;
+		}
+  	}
+  	.text-dimmed {
+	  	display: none;
+  	}
 	
 // 	transform: translateZ(0);
 /*
