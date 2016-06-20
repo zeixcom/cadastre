@@ -6,6 +6,50 @@
 
 {% block content_columns %}col-sm-8 col-md-8{% endblock %}
 
+ <!-- The tab navigation -->
+{% block mainnavigation %}
+<ul class="nav navbar-nav" role="navigation">
+  <li class="current yamm-fw">
+    <a href="#">Mensuration officiel <span class="sr-only">current page</span></a>
+  </li>
+  <li class="yamm-fw">
+    <a href="#">Cadastre RDPPF</a>
+  </li>
+  <li class="yamm-fw">
+    <a href="#">Registre foncier</a>
+  </li>
+  <li class="yamm-fw">
+    <a href="#">A propos<br /> de cadastre.ch</a>
+  </li>
+  <li class="yamm-fw">
+    <a href="#">Services &<br /> publications</a>
+  </li>
+  <li class=" yamm-fw">
+    <a href="#">Actualitè</a>
+  </li>
+  <li class="dropdown yamm-fw">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guide pour les professionnels</a>
+    <ul class="dropdown-menu" role="menu">
+      <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+      <li>
+        <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+        <div class="yamm-content container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <ul>
+              	<li><a href="#">Guide de la mensuration officielle</a></li>
+			  	<li><a href="#">Guide du cadastre RDPPF</a></li>
+              </ul>
+            </div>                    
+          </div>
+        </div><!-- `yamm-content` end -->
+      </li><!-- Dropdown `li` end -->
+    </ul><!-- Dropdown `ul` end -->
+  </li>
+</ul>
+{% endblock mainnavigation %}
+
+
 {% block content %}
   <div class="col-md-12">
       {# <div class="visible-xs visible-sm">
