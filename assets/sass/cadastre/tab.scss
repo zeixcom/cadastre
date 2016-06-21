@@ -48,7 +48,7 @@
 }
 
 
- .tab-content{
+.tab-content{
 	&.tab-border {	    
 		background: $white;
 	  border-right: 1px solid $darker-grey;
@@ -66,6 +66,15 @@
     address {
       text-align: left;
       padding-left: 0;
+    }
+    .tab-pane .col-sm-5 {
+	    padding-top:12px;
+	    h2 {
+	    	display: none;
+			@media only screen and (max-width: $screen-xs-max) {
+	    		display: block;
+	    	}
+		}
     }
  }
 
