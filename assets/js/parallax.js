@@ -6,8 +6,8 @@
 $(document).ready(function() {
 	
 	var calcParallaxBackHeight = function() {
-	    var containerHeight = $('.container-fluid.parallax-layer').outerHeight(),
-	    	headerHeight = 257,
+	    var containerHeight = $('.container-main').outerHeight(),
+	    	headerHeight = 389,
 	    	backHeight = containerHeight - headerHeight;
 	    $('.container-back').css('height', backHeight + 'px' );
     };
