@@ -46,6 +46,16 @@ header {
 		@media only screen and (max-width: $screen-sm-max) {
 		    width: $container-tablet;//768px
 		}
+		@media only screen and (max-width: $screen-xs-max) {
+		    display: block!important;
+			left: 20px;
+			position: relative;	
+			float: left;
+			max-width: 200px;
+		}
+		
+		
+		
 		
 	    img {
 		    margin: 0;
@@ -58,10 +68,11 @@ header {
 		    left:0px;
 			@media only screen and (max-width: $screen-sm-max) {
 			    top:13px;
+			    max-width: 170px;
 			}
-			// 	max : 1023  
-			@media only screen and (max-width: $screen-sm-max) {
-		    	max-width: 170px;
+			  
+			@media only screen and (max-width: $screen-xs-max) {
+		    	float: left;
 			}
     	}
 	    	
