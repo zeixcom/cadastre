@@ -56,7 +56,8 @@ body {
    box-shadow: none;
    
    > .container-fluid:first-of-type {
-	  margin: 234px auto 0 auto;
+	  margin: 210px auto 0 auto;
+	  padding-top:24px;
   }
 }
 
@@ -77,7 +78,7 @@ body {
 	position: relative;
 	z-index: 1;
   	margin:0 auto;
-	box-shadow: 24px 0 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
+	box-shadow: 24px 0 0px rgba(255,255,255,0.20), -24px 0 0px rgba(255,255,255,0.20);
 	padding: 0px $grid-gutter-width 0;
 	
 	// 	max : 1279
@@ -101,10 +102,7 @@ body {
   	}
   	.drilldown {
 	  	@media only screen and (max-width: $screen-xs-max) {
-			position: absolute;
-			bottom: 0;
-			margin:30px auto;
-			border: 0;
+			
 		}
   	}
   	.text-dimmed {
@@ -129,13 +127,15 @@ body {
 
 
 .container-back {
-// 	background: transparent url('../img/back-image.gif') 0 505px no-repeat;
+	background: transparent url('../img/back-image.gif') 0 209px no-repeat;
 	position: absolute;
 	height: 100%;
 	width: 100%;
+	max-width: 100%;
 	transform: translateZ(-1px) scale(2);
 	top: 0px;
 	z-index: -1;
+	background-size:cover;
 	@media only screen and (max-width: $screen-sm-max) {
 		display: none;				   	
    	}
