@@ -42,6 +42,7 @@ footer {
     margin: 0 auto;
     background: $night-rider;
     box-shadow: none;
+    padding-top:24px;
     @media only screen and (max-width: $screen-md-max) {
       max-width: $container-desktop;
     }
@@ -69,6 +70,9 @@ address {
       
       a {
         margin-left: $grid-gutter-width;
+      }
+      &:last-child {
+	      display: none;
       }
     }
     
@@ -129,6 +133,10 @@ address {
       font-size: 0.73em;
       top: -1px;
     }
+    @media only screen and (max-width: $screen-xs-max) {
+	    	left:12px;
+  	}
+    
   }
 }
 
