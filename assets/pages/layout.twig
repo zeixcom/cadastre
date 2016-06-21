@@ -54,10 +54,9 @@
     <!-- Other smart links can be added for main website functionalities -->
   </ul>
   
-  
   <div class="parallax">
-  <div class="container-back parallax-layer"> </div>
-  <div class="container-parallax parallax-layer">
+  <div class="parallax__layer parallax__layer--back"></div>
+  <div class="parallax__layer parallax__layer--front">
   
   <div class="container container-main {% block main_class %}{% endblock %}">
 
@@ -364,9 +363,8 @@
         </div>
       </div>
     {% endblock %}
-	
-	
-    <div class="container-fluid ">
+    
+    <div class="container-fluid">
       <div class="row">
         {% block sidebar %}
           <div class="col-sm-4 col-md-3 drilldown">
@@ -504,10 +502,8 @@
         </div>
       </div>
     </div>
-    </div> {# ENDE container-parallax parallax-layer #}
 
-    
-	
+    </div> {# / .parallax--front #}
     
     <footer>
 
@@ -649,13 +645,9 @@
         </nav>
       </address>
     </footer>
-
-
+    
   </div>
-  
-  
-  </div>  {# ENDE parallax #}
-  
+  </div> {# / .parallax #}
   
   <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
       <!-- The container for the modal slides -->

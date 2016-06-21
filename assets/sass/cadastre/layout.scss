@@ -9,25 +9,44 @@
  * Licensed under MIT
  =========================================================== */
 body {
-
 	background: none;
-/*	perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-*/
 }
 
-.parallax {
-	background: none;
-	perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+@media screen and (min-width: $screen-md-min) {
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    
+    body {
+      transform: translateZ(0);
+    }
+    
+    .parallax {
+      perspective: 1px;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    
+    .parallax__layer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    
+    .parallax__layer--front {
+      transform: translateZ(0);
+    }
+    
+    .parallax__layer--back {
+      transform: translateZ(-1px) scale(2);
+    }
+    
+  }
 }
 
 .container {
-	width: 1248px;
+	width: $container-large-desktop + ($grid-gutter-width * 2);
 	margin-bottom: 0;
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VjZmFmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
 	background: -moz-linear-gradient(top,  $bg-container 0%, $white 800px); 
@@ -41,14 +60,14 @@ body {
 	background-position-y: 208px;
 
 		@media only screen and (max-width: $screen-md-max) {
-		    width: $container-desktop;
+		  width: $container-desktop;
 		}
 		@media only screen and (max-width: $screen-sm-max) {
-		    width: $container-tablet;		    
+		  width: $container-tablet;		    
 		}
 		@media only screen and (max-width: $screen-xs-max) {
-		    background-position-y: 110px;	
-		    max-width: 100%;	    
+		  background-position-y: 110px;	
+		  max-width: 100%;	    
 		}
 }
 
@@ -57,90 +76,50 @@ body {
    
    > .container-fluid:first-of-type {
 	  margin: 210px auto 0 auto;
-	  padding-top:24px;
+	  padding-top: $grid-gutter-width;
   }
 }
 
-.parallax-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.container-parallax {
-	transform: translateZ(0);
-}
-
 .container-fluid {
-	width: $container-large-desktop + ($grid-gutter-width * 2) ;//1200 +48px
+	width: $container-large-desktop + ($grid-gutter-width * 2); //1200 +48px
 	position: relative;
 	z-index: 1;
-  	margin:0 auto;
-	box-shadow: 24px 0 0px rgba(255,255,255,0.20), -24px 0 0px rgba(255,255,255,0.20);
-	padding: 0px $grid-gutter-width 0;
+  margin: 0 auto;
+	box-shadow: 24px 0 0 rgba(255, 255, 255, 0.2), -24px 0 0 rgba(255, 255, 255, 0.2);
+	padding: 0 $grid-gutter-width 0;
 	
-	// 	max : 1279
-	@media only screen and (max-width: $screen-md-max) {
-	    width: $container-desktop;//940 + 48px
-		padding: 21px $grid-gutter-width 0;
-	}
+  // 	max : 1279
+  @media only screen and (max-width: $screen-md-max) {
+    width: $container-desktop;//940 + 48px
+    padding: 21px $grid-gutter-width 0;
+  }
 	// 	max : 1023  
 	@media only screen and (max-width: $screen-sm-max) {
-	    	 padding-left: ($grid-gutter-width / 2);
-			 padding-right: ($grid-gutter-width / 2);
-			 max-width: $container-tablet;			 
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    max-width: $container-tablet;			 
 	}
 	@media only screen and (max-width: $screen-xs-max) {
 		margin-top: 105px;
 		box-shadow: none;
 		max-width: 100%;
 	}
-	&.parallax-layer {
-		margin:0;
-  	}
-  	.drilldown {
-	  	@media only screen and (max-width: $screen-xs-max) {
-			
-		}
-  	}
-  	.text-dimmed {
-	  	display: none;
-  	}
-	
-// 	transform: translateZ(0);
-/*
-	background: $bg-container;   		
-	box-shadow: 24px 0 1px rgba(255,255,255,0.20), -24px 0 1px rgba(255,255,255,0.20);
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VjZmFmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-	background: -moz-linear-gradient(top,  $bg-container 0%, $white 800px); 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$bg-container), color-stop(800px, $white)); 
-	background: -webkit-linear-gradient(top,  $bg-container 0%, $white 800px); 
-	background: -o-linear-gradient(top,  $bg-container 0%, $white 800px); 
-	background: -ms-linear-gradient(top,  $bg-container 0%, $white 800px); 
-	background: linear-gradient(to bottom,  $bg-container 0%, $white 800px); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#ffffff',GradientType=0 ); 
-*/
- 
+
+	.text-dimmed {
+  	display: none;
+	}
 }
 
-
-.container-back {
+.parallax__layer--back {
 	background: transparent url('../img/back-image.gif') 0 209px no-repeat;
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	max-width: 100%;
-	transform: translateZ(-1px) scale(2);
-	top: 0px;
+	top: 0;
 	z-index: -1;
-	background-size:cover;
-	@media only screen and (max-width: $screen-sm-max) {
-		display: none;				   	
-   	}
+	background-size: cover;
 }
-
 
 p {
 	max-width: 43em;
