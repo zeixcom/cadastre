@@ -80,27 +80,12 @@
 		   }
 		   
 		   
-		   &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-			   position: relative;
-			   top:0px;
-			   &.current>a {
-				   padding-top:18px;
-				   border-bottom: 1px solid $gainsboro;
-				   // 	max : 1279
-					@media only screen and (max-width: $screen-md-max) {
-				   		height: 103px;	
-					}
-					// 	max : 1023  
-					@media only screen and (max-width: $screen-sm-max) {
-						height: 111px;
-					}
-			   }
-		   }
+		  
 		   &:nth-child(1) a, &:nth-child(2) a, &:nth-child(3) a {
 			   padding:30px 30px 30px 30px;
 			   font-size: 1.5em;
 			   max-width: 190px;
-			   height: 100%;
+			   height: 116px;
 			   &:hover {
 	   			   padding-top:18px;
 	   			   background-color: $gainsboro;	   			   
@@ -132,7 +117,7 @@
 			   &.current>a {
 				   border-top:12px solid $sinbad-dark;
 				   background-color: $gainsboro;
-				   
+				   height:117px;
 			   } 			   			  
 		   }
 		   &:nth-child(2){
@@ -166,6 +151,27 @@
 				    margin-right: 42px;
 				}
 		   }
+		    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+			   position: relative;
+			   top:0px;
+			   &.current>a {
+				   padding-top:18px;
+				   border-bottom: 1px solid $gainsboro;
+				   // 	max : 1279
+					@media only screen and (max-width: $screen-md-max) {
+				   		height: 103px;	
+					}
+					// 	max : 1023  
+					@media only screen and (max-width: $screen-sm-max) {
+						height: 111px;
+					}
+			   }
+		   }
+		   
+		   
+		   
+		   
+		   
 		   &:nth-child(7){
 			   float: right;
 			   margin-left: 10px;
@@ -178,15 +184,16 @@
 				}
 				// 	max : 1023  
 				@media only screen and (max-width: $screen-sm-max) {
-				    width: 260px;
+				    width: 270px;
 				   	top:15px;
+				   	
 				}
 				
 				a {
 				   color:$white;
 				   background-color: $very-dark-grey;
 				   max-width: 175px;
-				   text-align: left;
+				   padding: 10px 20px 10px 0px;
 				    &:visited, &:focus {
 					   color:$white;
 					   background-color: $very-dark-grey; 
@@ -196,8 +203,9 @@
 				   }
 				   //   max-width:1023px
 			   		@media only screen and (max-width: $screen-sm-max) {
-				   	   	max-width: 265px;
-				   	   	height: 40px;					
+				   	   	max-width: 270px;
+				   	   	height: 40px;
+				   	   	padding:12px 17px;					
 				   	}
 				}
 			   			  
@@ -254,7 +262,7 @@
 				   }
 		        //  max : 1023px
 			   	@media only screen and (max-width: $screen-sm-max) {
-					bottom: 13px;
+					bottom: 12px;
 					}
 		      }
 		      &.open > a {
@@ -270,7 +278,7 @@
 			      content: ';';
 			      bottom: 32px;
 				  @media only screen and (max-width: $screen-sm-max) {
-				  bottom: 13px;
+				  bottom: 12px;
 					}
 			    }
 			  }
@@ -500,16 +508,17 @@
 
 
 
+
+.drilldown-container {
+	
+}
+.breadcrumb {
+	margin-left: -24px;
+}
+
+
 .nav-page-list {  
-	img {
-		background: none;
-		margin-top: 21px;
-		padding-left: 12px;
-		
-		@media only screen and (max-width: $screen-sm-max) {
-		  padding-left: 0;
-		}
-	}
+
 	li {
 		background: $light-grey;
 		padding-left:12px;
@@ -524,6 +533,9 @@
 		}
 		a {
 			color:$night-rider;
+			@media only screen and (max-width: $screen-sm-max) {
+				padding-left: 0;
+			}
 		}
 		
 	}
@@ -566,6 +578,9 @@
 			&:before {
 				background: none;
 			} 
+		}
+		ul li:first-child a {
+			color:$night-rider;
 		}
 	}
 	
@@ -613,6 +628,9 @@
 		}
 		> ul > li:last-child {
   		background-color: $light-grey;
+  			&:hover {
+				background: $silver-dark;
+			}
 		}
 		.list-emphasis > a {
 		  background: $sinbad-active;
@@ -642,6 +660,9 @@
 		}
 	> ul > li:last-child {
    		background-color: $light-grey;
+   		&:hover {
+			background: $silver-dark;
+			}
 	}
 	.list-emphasis> a {
 	  background: $shilo-active;
@@ -693,6 +714,12 @@
 
 
 .nav-mobile {
+	height: 100%;
+	.nav-mobile-header {
+		h1 {
+			display: none;
+		}
+	}
 	.nav-mobile-menu{
 		.icon--search {
 			background: transparent url('../img/icon-lupe-mobile.png') 0px 0px no-repeat; 
