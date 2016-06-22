@@ -66,7 +66,7 @@ body {
 		  width: $container-tablet;		    
 		}
 		@media only screen and (max-width: $screen-xs-max) {
-		  background-position-y: 110px;	
+		  background-position-y: 138px;	
 		  max-width: 100%;	    
 		}
 }
@@ -84,7 +84,7 @@ body {
 	width: $container-large-desktop + ($grid-gutter-width * 2); //1200 +48px
 	position: relative;
 	z-index: 1;
-  margin: 0 auto;
+	margin: 0 auto;
 	box-shadow: 24px 0 0 rgba(255, 255, 255, 0.2), -24px 0 0 rgba(255, 255, 255, 0.2);
 	padding: 0 $grid-gutter-width 0;
 	
@@ -100,9 +100,10 @@ body {
     max-width: $container-tablet;			 
 	}
 	@media only screen and (max-width: $screen-xs-max) {
-		margin-top: 105px;
+		margin-top: 67px;
 		box-shadow: none;
 		max-width: 100%;
+// 		z-index:100;
 	}
 
 	.text-dimmed {
