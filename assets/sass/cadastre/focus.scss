@@ -121,7 +121,10 @@ Please be careful about the length of the text in the tabs, the height is fixed.
   &:nth-child(1) {
 	
 	&.active {
-		border-top:1px solid $sinbad;
+		border-top:1px solid $silver;
+		a {
+			background-color: $silver;
+		}
   	}
   	
 	  a {
@@ -136,8 +139,12 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	  }
   }
   &:nth-child(2) {
+	  	
 	&.active {
-		border-top:1px solid $shilo;
+		border-top:1px solid $silver;
+		a {
+			background-color: $silver;
+		}
   	}
 	   a {
 		background-color: $shilo;
@@ -151,9 +158,12 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	  }
   }
   &:nth-child(3) {
-	 &.active {
-		border-top:1px solid $sapling;
-  	} 
+	&.active {
+		border-top:1px solid $silver;
+		a {
+			background-color: $silver;
+		}
+  	}
 	  a {
 		background-color: $sapling;
 		&:after {
@@ -289,13 +299,13 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	.tab-pane {
 		position: relative;
 		&:nth-child(1) .col-sm-5 {
-			background-color: $sinbad;
+			background-color: $silver;
 		}
 		&:nth-child(2) .col-sm-5 {
-			background-color: $shilo;
+			background-color: $silver;
 		}
 		&:nth-child(3) .col-sm-5 {
-			background-color: $sapling;
+			background-color: $silver;
 		}
 	}
 	.col-sm-7, .col-sm-5 {
@@ -304,9 +314,14 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	.col-sm-5 {
 		padding-left: 12px!important;
 		position: absolute;
-		opacity: 0.94;
+		opacity: 0.88;
 		bottom: 0;
 		margin-left: 12px;
+		p {
+			font-size: .94em;
+		line-height: 1.4em;
+		max-width:100%;
+		}
 		@media only screen and (max-width: $screen-sm) {
 			margin-left: 0;
 			position: relative;
