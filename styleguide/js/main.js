@@ -245,9 +245,51 @@ function disableControl(element) {
         $('#spacer').remove();
       }
     }
+    
+    if (y >= top) {
+      if (!$('a.brand').hasClass('fixed')) {
+        $('a.brand').addClass('fixed');
+      }
+    }
+    else {
+      if ($('a.brand').hasClass('fixed')) {
+        $('a.brand').removeClass('fixed');
+      }
+    }
+
+	
+
 
   });
  }) (jQuery);
+/* ==========================================================
+ * carousel.js
+ * Carousel helper
+ *
+ * Author: 
+ * Date:   
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+
+
+
+/*
+$(document).ready(function(){
+
+// 	$(window).on('resize', function() {
+		if ($(window).width() <= 767){	
+			$('.col-sm-4').insertAfter('.col-sm-8');
+			else {
+			$('.col-sm-8').insertAfter('.col-sm-4');	
+			}
+		}	
+// 	});
+    
+});
+*/
 /* ==========================================================
 
  ========================================================== */

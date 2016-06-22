@@ -30,6 +30,11 @@ a:visited {
   color: $dark-blue;
 }
 
+a:focus {
+	outline: #1166aa 5px;
+    outline-offset: 1px;
+}
+
 a.icon:hover, a[data-toggle=collapse]:hover {
   text-decoration: none;
 }
