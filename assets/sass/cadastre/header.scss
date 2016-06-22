@@ -48,10 +48,12 @@ header {
 		}
 		@media only screen and (max-width: $screen-xs-max) {
 		    display: block!important;
-			left: 20px;
+			left: 12px;
 			position: relative;	
 			float: left;
 			max-width: 200px;
+			height: 44px;
+			z-index: 102;
 		}
 		
 		
@@ -73,6 +75,7 @@ header {
 			  
 			@media only screen and (max-width: $screen-xs-max) {
 		    	float: left;
+		    	top:9px;
 			}
     	}
 	    	
@@ -85,6 +88,9 @@ header {
 		    overflow: hidden;
 		    clip: rect(0,0,0,0);
 		    border: 0;
+	    }
+	    &.fixed {
+		    position: fixed;
 	    }
     }
 }
