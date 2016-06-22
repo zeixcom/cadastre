@@ -31,6 +31,20 @@
         $('#spacer').remove();
       }
     }
+    
+    if (y >= top) {
+      if (!$('a.brand').hasClass('fixed')) {
+        $('a.brand').addClass('fixed');
+      }
+    }
+    else {
+      if ($('a.brand').hasClass('fixed')) {
+        $('a.brand').removeClass('fixed');
+      }
+    }
+
+	
+
 
   });
  }) (jQuery);
