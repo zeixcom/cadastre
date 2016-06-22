@@ -26,6 +26,8 @@
   
    @media only screen and (max-width: $screen-xs-max) {
 	   border-bottom:0;
+	   border-top:0;
+	   z-index: 101;
    }
    &.yamm .nav {
 	   border-left:0;
@@ -277,7 +279,10 @@
 			    border-top: 0;
 			    margin-top: 0;
 			    height: 60px;
-			    &:hover, &:visited, &:focus {
+			    @media only screen and (max-width: $screen-sm-max) {
+					height: auto;				  
+				}
+				&:hover, &:visited, &:focus {
 			      background: none;
 			    }
 			    &:after {
@@ -285,6 +290,7 @@
 // 			      bottom: 32px;
 				  @media only screen and (max-width: $screen-sm-max) {
 				  bottom: 12px;
+				  
 					}
 			    }
 			  }
@@ -485,7 +491,7 @@
 	margin:0;
 		@media only screen and (max-width: $screen-xs-max) {
 		    top:45px;
-		    height: 50px;
+		    height: 46px;
 		}
 		
   &.yamm--select {
@@ -510,10 +516,23 @@
 
 .drilldown {
 	overflow: visible;
+	a.collapsed, a[data-toggle=collapse] {
+		@media only screen and (max-width: $screen-xs-max) {
+			padding:10px 10px 10px 12px;
+		}
+	}
+	&[class*=col-] {
+		@media only screen and (max-width: $screen-xs-max) {
+			border-bottom: 0;
+		}
+	}
 }
 .drilldown-container {
 	overflow-y: visible;
 	.nav-page-list ul {
+		li {
+			max-width: 100%;
+		}
 		margin-left: -12px;
 		@media only screen and (max-width: $screen-sm-max) {
 			margin-left: 0px;
@@ -522,7 +541,13 @@
 			margin-left: 0;
 		}
 	}
-	
+	@media only screen and (max-width: $screen-xs-max) {
+		nav.nav-page-list {
+				a.icon--before {
+					display: none!important;
+				}
+			}
+	}
 }
 .breadcrumb {
 	margin-left: -24px;
@@ -637,6 +662,9 @@
 		@media only screen and (max-width: $screen-sm-max) {
 			margin-left: 12px;
 		}
+		@media only screen and (max-width: $screen-sm) {
+			margin-left: 30px;
+		}
 		&:before {
 			font-size: .8em;
 			top: 0px;
@@ -726,11 +754,6 @@
 				background: $sapling-hover;
 			}
 		}
-/*
-	> ul > li:last-child {
-   		background-color: $light-grey;
-	}
-*/
 	.list-emphasis > a {
 	  background: $sapling-active;
 	}
@@ -750,7 +773,10 @@
 
 
 .nav-mobile {
-	height: 100%;
+	height:44px;
+	.dropdown-menu {
+		margin-top: 1px;
+	}
 	.nav-mobile-header {
 		h1 {
 			display: none;
@@ -758,18 +784,71 @@
 	}
 	.nav-mobile-menu{
 		.icon--search {
-			background: transparent url('../img/icon-lupe-mobile.png') 0px 0px no-repeat; 
-			display: inline-block;
-			width: 28px;
-			height: 17px;
+			background: transparent url('../img/icon-lupe-mobile.png') 0px 3px no-repeat; 
+			display: block;
+			width: 16px;
+			height: 20px;
 			vertical-align: middle;
-			&:after {
-				content: none;
-			}
+				&:after {
+					content: none;
+				}
 			}
 				
 	}
 	.nav-mobile-logo img {
 		display: none;
 	}
+	&.fixed {
+		border-bottom: 5px solid $grey;
+	}
+	
+	.nav-page-list{
+		ul {
+			li {
+				&:nth-child(1) {
+					background: $sinbad;
+				}
+				&:nth-child(2) {
+					background: $shilo;
+				}
+				&:nth-child(3) {
+					background: $sapling;
+					margin-bottom: 32px;
+				}
+				&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8) {
+					background: $very-light-grey;
+				}
+				&:nth-child(7) {
+					margin-top: 21px;
+				}
+			}
+		}
+	}
+	.dropdown.open {
+		span.icon--search {
+			background: none;
+			&:after {
+				content: 'x';
+			}
+		}
+	}
+	.table-cell>a {
+		padding:6px 15px;
+		display: block;
+	}
+	
 }
+
+a[data-toggle=collapse] {
+	@media only screen and (max-width: $screen-xs-max) {
+		border:0px solid black;
+		&:first-child {
+			border:0;
+		}
+		:before {
+			top:0;
+			padding-right: 7px;
+		}
+	}
+}
+
