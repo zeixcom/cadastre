@@ -313,10 +313,10 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	}
 	.col-sm-5 {
 		padding-left: 12px!important;
-		position: absolute;
+		position: absolute!important;
 		opacity: 0.88;
 		bottom: 0;
-		margin-left: 12px;
+		margin-left: 12px!important;
 		p {
 			font-size: .94em;
 		line-height: 1.4em;
