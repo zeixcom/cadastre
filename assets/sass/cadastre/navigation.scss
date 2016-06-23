@@ -84,28 +84,34 @@
 		   
 		  
 		   &:nth-child(1) a, &:nth-child(2) a, &:nth-child(3) a {
-			   padding:30px 30px 30px 30px;
+			   padding:33px 30px 27px 30px;
 			   font-size: 1.5em;
 			   max-width: 190px;
 			   height: 116px;
 			   &:hover {
-	   			   padding-top:18px;
+	   			   padding-top:21px;
 	   			   background-color: $gainsboro;	   			   
 			   }	
 			   
 			   // 	max : 1279
 				@media only screen and (max-width: $screen-md-max) {
-				    padding:30px 15px 15px 15px;
+				    padding:26px 15px 19px 15px;
 			   		font-size: 1em;
 			   		max-width: 120px;
-			   		height: 102px;	
+			   		height: 102px;
+			   		&:hover {
+			   			padding-top:13px;
+	   			   	}	
 				}
 				// 	max : 1023  
 				@media only screen and (max-width: $screen-sm-max) {
-				    padding: 30px 10px;
+				    padding: 32px 10px 28px 10px;
 					font-size: 1.1em;
 					max-width:120px;
-					height: 110px;	
+					height: 110px;
+					&:hover {
+						padding-top:21px;
+	   			   	}	
 				}
 		   }
 		   
@@ -157,7 +163,7 @@
 			   position: relative;
 			   top:0px;
 			   &.current>a {
-				   padding-top:18px;
+				   padding-top:21px;
 				   border-bottom: 1px solid $gainsboro;
 				   // 	max : 1279
 					@media only screen and (max-width: $screen-md-max) {
@@ -195,7 +201,7 @@
 				   color:$white;
 				   background-color: $very-dark-grey;
 				   max-width: 175px;
-				   padding: 10px 20px 10px 0px;
+				   padding: 12px 20px 8px 0px;
 				    &:visited, &:focus {
 					   color:$white;
 					   background-color: $very-dark-grey; 
@@ -218,7 +224,7 @@
 			   font-size: 1em;
 			   max-width:160px;
 			   background: none;			   
-			   padding:10px 20px;
+			   padding:12px 20px 8px 20px;
 			   text-align: center;
 			   height: 60px;
 			   vertical-align: middle;
@@ -513,7 +519,6 @@
 }
 
 
-
 .drilldown {
 	overflow: visible;
 	a.collapsed, a[data-toggle=collapse] {
@@ -525,6 +530,18 @@
 		@media only screen and (max-width: $screen-xs-max) {
 			border-bottom: 0;
 		}
+	}
+	a[data-toggle=collapse]:before {
+		font-size: 1em;
+		content: ',';
+		width: 15px;
+	}
+	a[data-toggle=collapse].collapsed:before {
+		font-size: 1em;
+		content: ':';
+		width: 15px;
+
+		
 	}
 }
 .drilldown-container {
@@ -543,7 +560,7 @@
 	}
 	@media only screen and (max-width: $screen-xs-max) {
 		nav.nav-page-list {
-				a.icon--before {
+				>a:first-child {
 					display: none!important;
 				}
 			}
@@ -567,6 +584,7 @@
 		}
 		&.active {
 			border-bottom: 0;
+			padding:12px 0 8px 0;
 			&:before {
 				background: none;
 			}
@@ -574,13 +592,13 @@
 		a, span {
 			color:$night-rider;
 			font-size: 1.155em;
+			padding:12px 0 8px 0;
 			@media only screen and (max-width: $screen-sm-max) {
 				padding-left: 0;
 			}
 			&:before {
 				content: none;
 			}
-			
 		}
 			
 		&:before {
@@ -657,10 +675,10 @@
 		display: inline-block;
 		
 		width: auto;
-		margin: 0 0 15px 20px;
+		margin: 15px 0 15px 20px;
 		
 		@media only screen and (max-width: $screen-sm-max) {
-			margin-left: 12px;
+			margin-left: 30px;
 		}
 		@media only screen and (max-width: $screen-sm) {
 			margin-left: 30px;
@@ -782,7 +800,7 @@
 			display: none;
 		}
 	}
-	.nav-mobile-menu{
+	.nav-mobile-menu {
 		.icon--search {
 			background: transparent url('../img/icon-lupe-mobile.png') 0px 3px no-repeat; 
 			display: block;
@@ -792,8 +810,20 @@
 				&:after {
 					content: none;
 				}
-			}
-				
+			}				
+	}
+	.dropdown.open .form {
+		.icon--search {
+			background: transparent url('../img/icon-lupe-mobile.png') 0px 3px no-repeat; 
+			display: block;
+			width: 16px;
+			height: 20px;
+			vertical-align: middle;
+			top:15px;
+				&:after {
+					content: none;
+				}
+			}				
 	}
 	.nav-mobile-logo img {
 		display: none;
@@ -815,11 +845,17 @@
 					background: $sapling;
 					margin-bottom: 32px;
 				}
-				&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8) {
+				&:nth-child(4),&:nth-child(5),&:nth-child(6){
 					background: $very-light-grey;
 				}
+				&:nth-child(7),&:nth-child(8)  {
+					background: $very-dark-grey;
+					a {
+						color:$white;
+					}
+				}
 				&:nth-child(7) {
-					margin-top: 21px;
+					margin-top: 32px;
 				}
 			}
 		}
@@ -836,7 +872,10 @@
 		padding:6px 15px;
 		display: block;
 	}
-	
+	.dropdown-menu form input {
+		padding-top:.5em;
+		padding-bottom: .3em;
+	}
 }
 
 a[data-toggle=collapse] {
