@@ -382,9 +382,9 @@
       }
     }
     &:last-child a {
-	    background: transparent url('../img/icon-lupe.png') 50px 0px no-repeat; 
+	    background: transparent url('../img/icon-lupe-hell.png') 50px 0px no-repeat; 
 	    display: inline-block;
-	    width: 67px;
+	    width: 68px;
     }
     	@media only screen and (max-width: $screen-sm-max) {
 	    margin-left: 2em;
@@ -802,10 +802,10 @@
 	}
 	.nav-mobile-menu {
 		.icon--search {
-			background: transparent url('../img/icon-lupe-mobile.png') 0px 3px no-repeat; 
+			background: transparent url('../img/icon-lupe-dunkel.png') 0px 3px no-repeat; 
 			display: block;
-			width: 16px;
-			height: 20px;
+			width: 18px;
+			height: 21px;
 			vertical-align: middle;
 				&:after {
 					content: none;
@@ -814,10 +814,10 @@
 	}
 	.dropdown.open .form {
 		.icon--search {
-			background: transparent url('../img/icon-lupe-mobile.png') 0px 3px no-repeat; 
+			background: transparent url('../img/icon-lupe-dunkel.png') 0px 3px no-repeat; 
 			display: block;
-			width: 16px;
-			height: 20px;
+			width: 18px;
+			height: 21px;
 			vertical-align: middle;
 			top:15px;
 				&:after {
@@ -843,7 +843,7 @@
 				}
 				&:nth-child(3) {
 					background: $sapling;
-					margin-bottom: 32px;
+					margin-bottom: 16px;
 				}
 				&:nth-child(4),&:nth-child(5),&:nth-child(6){
 					background: $very-light-grey;
@@ -855,7 +855,7 @@
 					}
 				}
 				&:nth-child(7) {
-					margin-top: 32px;
+					margin-top: 16px;
 				}
 			}
 		}
@@ -869,12 +869,13 @@
 		}
 	}
 	.table-cell>a {
-		padding:6px 15px;
+		padding:10px 15px;
 		display: block;
+		height: 44px;
 	}
 	.dropdown-menu form input {
-		padding-top:.5em;
-		padding-bottom: .3em;
+		padding-top:.6em;
+		padding-left: 30px;
 	}
 }
 
