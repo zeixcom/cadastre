@@ -30,8 +30,18 @@ a:visited {
   color: $dark-blue;
 }
 
-a:focus {
-	outline: #1166aa 5px;
+.carousel-control:focus, 
+.dropdown-toggle:focus, 
+.form-control:focus, :not([class*=col-]):focus, 
+a:focus, 
+button:focus, 
+input[type=checkbox]:focus, 
+input[type=file]:focus, 
+input[type=radio]:focus
+.nav a:focus,
+.nav-main.yamm .nav>li>a:focus,
+.nav-page-list span:focus  {
+	outline-color: $dark-blue!important;
     outline-offset: 1px;
 }
 
