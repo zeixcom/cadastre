@@ -10,7 +10,7 @@
  ========================================================== */
 
  (function($) {
-
+	 
   // Handle scroll to position nav as fixed
 
   var top = 36;
@@ -32,17 +32,18 @@
       }
     }
     
-    if (y >= top) {
-      if (!$('a.brand').hasClass('fixed')) {
-        $('a.brand').addClass('fixed');
-      }
-    }
-    else {
-      if ($('a.brand').hasClass('fixed')) {
-        $('a.brand').removeClass('fixed');
-      }
-    }
-
+    if ($(window).width() <= 767) {
+	    if (y >= top) {
+	      if (!$('a.brand').hasClass('fixed')) {
+	        $('a.brand').addClass('fixed');
+	      }
+	    }
+	    else {
+	      if ($('a.brand').hasClass('fixed')) {
+	        $('a.brand').removeClass('fixed');
+	      }
+	    }
+	}
 	
 
 
