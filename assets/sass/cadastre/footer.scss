@@ -50,6 +50,9 @@ footer {
     @media only screen and (max-width: $screen-sm-max) {
       max-width: $container-tablet;
     }
+    @media only screen and (max-width: $screen-xs-max) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -151,6 +154,7 @@ address {
     
     ul {
       border-bottom: 1px solid $coal;
+      margin-right: -10px;
     }
     
     li {
