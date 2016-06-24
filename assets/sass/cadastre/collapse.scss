@@ -33,6 +33,16 @@ a[data-toggle="collapse"] {
 		}
 	}
 }
+.icon--before.icon--less:before, 
+a.icon--less[data-toggle=collapse]:before{
+	content:".";
+}
+.icon--before.icon--greater:before, 
+a.icon--greater[data-toggle=collapse]:before, 
+a[data-toggle=collapse].collapsed:before {
+	content:":";
+}
+
 
 .collapse-box {
 	a[data-toggle="collapse"] { 
