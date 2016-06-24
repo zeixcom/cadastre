@@ -64,7 +64,7 @@ function carouselInit ($) {
           biggestHeight = $(this).height();
         }
       });
-      $(this).find('.item').height(biggestHeight);
+       $(this).find('.item').height(biggestHeight);
     });
   }
 }
