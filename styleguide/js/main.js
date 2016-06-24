@@ -298,6 +298,7 @@ $(document).ready(function(){
  */
 
 
+/*
 ;(function ( $, window, document, undefined ) {
 
   // Polyfill for requestAnimationFrame
@@ -696,6 +697,7 @@ $(document).ready(function(){
   });
 
 }(jQuery, window, document));
+*/
 
 
 /* ==========================================================

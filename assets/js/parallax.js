@@ -5,6 +5,7 @@
  */
 
 
+/*
 ;(function ( $, window, document, undefined ) {
 
   // Polyfill for requestAnimationFrame
@@ -403,4 +404,5 @@
   });
 
 }(jQuery, window, document));
+*/
 
