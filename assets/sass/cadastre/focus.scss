@@ -311,6 +311,7 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 	.col-sm-7, .col-sm-5 {
 		width: 100%;
 	}
+	
 	.col-sm-5 {
 		padding-left: 12px!important;
 		position: absolute!important;
@@ -318,13 +319,16 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 		bottom: 0;
 		margin-left: 12px!important;
 		p {
-			font-size: .94em;
-		line-height: 1.4em;
-		max-width:100%;
+			font-size: .88em;
+			line-height: 1.4em;
+			max-width:100%;
 		}
 		@media only screen and (max-width: $screen-sm) {
 			margin-left: 0;
-			position: relative;
+			position: relative!important;
+		} //max768 && min 767
+		@media only screen and (max-width: $screen-sm) {
+			max-width: 696px;
 		}
 	}
 }
