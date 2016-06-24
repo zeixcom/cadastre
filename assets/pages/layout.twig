@@ -42,6 +42,8 @@
   "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"
   ];
   </script>
+
+
 </head>
 <body>
   <ul class="access-keys" role="navigation">
@@ -50,13 +52,15 @@
     <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
     <li><a href="contact.html" accesskey="3">Contact page</a></li><!-- Link to contact page -->
     <li><a href="sitemap.html" accesskey="4">Sitemap</a></li><!-- Link to sitemap page or page area -->
-    <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
+    <li><a href="results.html" accesskey="5">Search</a></li><!-- Link to search field -->
     <!-- Other smart links can be added for main website functionalities -->
   </ul>
   
-  <div class="parallax">
-  <div class="parallax__layer parallax__layer--back"></div>
-  <div class="parallax__layer parallax__layer--front">
+
+{#   <div class="parallax__layer parallax__layer--back"></div> #}
+
+  
+{#   <div class="parallax__layer parallax__layer--front"> #}
   
   <div class="container container-main {% block main_class %}{% endblock %}">
 
@@ -226,7 +230,7 @@
                 <li><a href="#">Jobs</a></li>
                 <li><a href="#">Media</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Search</a></li>
+                <li><a href="results.html">Search</a></li>
               </ul>
             </nav>
           </section>
@@ -236,9 +240,6 @@
           <img src="../img/cadastre_logo.png" onerror="this.onerror=null; this.src='../img/cadastre_logo.jpg'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
           <h1>Cadastre Design based on Swiss Confederation Web Guidelines</h1>
         </a>
-
-        
-
       </header>
     {% endblock %}
 
@@ -263,18 +264,7 @@
                     <ul>
                       <li><a href="#">Mensuration officiel</a></li>
                       <li><a href="#">Cadastre RDPPF</a></li>
-                      <li class="list-sub"><a href="#">Registre foncier</a>
-                        <!-- sub-list element -->
-                        <nav class="drilldown-sub" aria-expanded="false">
-                          <a href="#" class="icon icon--before icon--less drilldown-back" aria-hidden="true">Mineral Water</a>
-                          <ul>
-                            <li class="list-emphasis"><a href="#">Mineral Water</a></li>
-                            <li><a href="#">Test</a></li>
-                            <li><a href="#">Test2</a></li>
-                            <li><a href="#">Test3</a></li>
-                          </ul>
-                        </nav>
-                      </li>
+                      <li><a href="#">Registre foncier</a></li>
                       <li><a href="#">A propos de cadastre.ch</a></li>
                       <li><a href="#">Services &amp; publications</a></li>
                       <li><a href="#">Actualitè</a></li>
@@ -503,8 +493,6 @@
       </div>
     </div>
 
-    </div> {# / .parallax--front #}
-    
     <footer>
 
       <div class="container-fluid footer-service">
@@ -645,9 +633,12 @@
         </nav>
       </address>
     </footer>
-    
+  
   </div>
-  </div> {# / .parallax #}
+
+{# DIV Container für Parallax Scrolling #}
+{#   <div class="parallax-window" data-parallax="scroll" data-image-src="../img/back-image.gif"></div> #}
+  
   
   <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
       <!-- The container for the modal slides -->
