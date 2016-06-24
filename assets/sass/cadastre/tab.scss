@@ -11,7 +11,11 @@
  .nav-tabs { 	
  	border-bottom: 1px solid $darker-grey;
 	
-	li {		
+	li {
+		//spezial CSS for IE10
+		-ms-flex-positive: 1; 
+		-ms-flex-negative: 0; 
+		-ms-flex-preferred-size: 33%;		
 		a {
 			background: $gainsboro;
 			border-bottom: 1px solid $darker-grey;
@@ -70,7 +74,7 @@
     .tab-pane .col-sm-5 {
 	    padding-top:12px;
 	    margin-right: 12px;
-	    margin-left: 12px;
+	    
 	    h2 {
 	    	display: none;
 			@media only screen and (max-width: $screen-xs-max) {
@@ -137,7 +141,12 @@
     color: $night-rider;
     transition: all 0.2s;
     border-top: 0;    
-    &:before {color: $darker-grey;}
+    &:before {
+	    color: $darker-grey;
+	    font-size: 1em;
+		content: ',';
+		width: 15px;
+	    }
     &:hover {text-decoration: none;}
     &:first-child {border: 1px solid $darker-grey;}
 
@@ -148,7 +157,10 @@
   }
   a[data-toggle="collapse"].collapse-closed {    
     border-bottom: 1px solid $darker-grey;
-    color: $night-rider;   
+    color: $night-rider;
+    &:before {
+	    font-size: 1em;
+    }   
     &:first-child {border-top: 1px solid $darker-grey;
     }
   }
