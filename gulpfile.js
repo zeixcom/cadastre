@@ -80,6 +80,8 @@ gulp.task('vendors', function() {
       'bower_components/placeholdr/placeholdr.js',
       'bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
       'bower_components/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
+      'bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js',
+      'bower_components/skrollr/dist/skrollr.min.js',
       'node_modules/moment/moment.js',
       'node_modules/pikaday/pikaday.js'
     ])
