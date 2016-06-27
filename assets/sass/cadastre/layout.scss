@@ -9,7 +9,12 @@
  * Licensed under MIT
  =========================================================== */
 body {
-	background: none;
+background: url('../img/cadastre-bg.png') 0% 0% repeat;
+background-size: cover;	
+	-skrollr-animation-name:animation1;
+	@media only screen and (max-width: $screen-xs-max) {
+	    background:none;
+    }
 }
 
 .skin-layout-template-homepage, 
@@ -92,18 +97,9 @@ body {
 		margin-top: 67px;
 		box-shadow: none;
 		max-width: 100%;
-// 		z-index:100;
 	}
 
 }
-
-
-
-.parallax-window {
-    min-height: 400px;
-    background: transparent;
-}
-
 
 p {
 	max-width: 43em;
