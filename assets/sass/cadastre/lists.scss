@@ -25,6 +25,17 @@
 	}	
 }
 
+.list-group.news-feed {
+	margin-bottom: 0;
+	.scroll-y {
+		max-height: 507px!important;
+	}
+		@media only screen and (max-width: $screen-md-max) {
+			.scroll-y {
+				max-height: 377px!important;
+			}
+		}
+}
 
 li {
   font-size: 1em;
