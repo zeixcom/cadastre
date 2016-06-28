@@ -9,13 +9,39 @@
  * Licensed under MIT
  =========================================================== */
 body {
-background: url('../img/cadastre-bg.png') 0% 0% repeat;
-background-size: cover;	
-	-skrollr-animation-name:animation1;
+	 background: url('../img/cadastre-bg.png') 0% 0% no-repeat;
+	// background: none;
+	// background: red;
+
+	// 	-skrollr-animation-name:animation1;
 	@media only screen and (max-width: $screen-xs-max) {
 	    background:none;
     }
 }
+
+.parallax-img {
+	background: url('../img/cadastre-bg.png') 0% 0% no-repeat;
+	height: 4799px;
+	width: 2500px;
+}
+
+.parallax-bg {
+	z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+		
+    img {
+// 		max-width: none;
+		@media only screen and (max-width: $screen-sm-max) {
+		  height: 105%;		    
+		}
+    }
+}
+
 
 .skin-layout-template-homepage, 
 .skin-layout-template-searchpage {
