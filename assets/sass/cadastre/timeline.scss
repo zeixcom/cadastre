@@ -1,0 +1,22 @@
+/* ==========================================================
+ * timeline.scss
+ * Timeline styles for cadastre
+ *
+ * Author: Henrik Hentschel
+ * Date:   2016-08-05 
+ *
+ * Copyright 2016 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+ 
+ .timeline {
+	 .container {
+		 background: none;
+		 padding-top: 20px;
+	 }
+	 .nav-container {
+		 .date, .title {
+			 color:$black;
+		 }
+	 }
+ }
