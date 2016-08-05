@@ -829,8 +829,17 @@
 				}
 			}				
 	}
-	.nav-mobile-logo img {
-		width:175px;
+	.nav-mobile-logo { 
+		background-image: url('../img/cadastre_logo.png'); 
+		background-repeat: no-repeat; 
+		background-size: auto 100%;
+		width: 300px;
+		
+			img {
+// 	 		width:175px;
+			visibility: hidden;
+			max-width: 100px; 
+			}
 	}
 	&.fixed {
 		border-bottom: 5px solid $grey;

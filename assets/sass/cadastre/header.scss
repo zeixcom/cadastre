@@ -36,7 +36,14 @@ header {
 	    position: relative;
 	    top: 0px;
 	    z-index: 100;
-	    height: 60px;
+	    height: 100px;
+	    
+	    background-image: url('../img/cadastre_logo.png'); 
+		background-repeat: no-repeat; 
+		background-size: auto 49px;
+		background-position: right 27px;
+	    
+	    
 	    
 	    // 	max : 1279
 		@media only screen and (max-width: $screen-md-max) {
@@ -45,6 +52,10 @@ header {
 		// 	max : 1023  
 		@media only screen and (max-width: $screen-sm-max) {
 		    width: $container-tablet;//768px
+		    
+		    background-size: auto 25px;
+			background-position: right 15px;
+		    
 		}
 		@media only screen and (max-width: $screen-xs-max) {
 		    
@@ -54,7 +65,8 @@ header {
 			max-width: 200px;
 			height: 44px;
 			z-index: 102;
-		}
+			
+			}
 		
 		
 		
@@ -68,6 +80,11 @@ header {
 			top: 25px;
 			z-index: 100;
 		    left:0px;
+		    
+		    visibility: hidden;
+			max-width: 100px; 
+		    
+		    
 			@media only screen and (max-width: $screen-sm-max) {
 			    top:13px;
 			    max-width: 170px;
@@ -76,6 +93,8 @@ header {
 			@media only screen and (max-width: $screen-xs-max) {
 		    	float: left;
 		    	top:9px;
+
+
 			}
     	}
 	    	
