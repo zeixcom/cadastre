@@ -611,11 +611,17 @@
 			border-bottom: 0;
 		}
 	}
-	li.list-emphasis > a {
+	li.list-emphasis > span {
 		background: $very-dark-grey;
 		border-bottom: 1px solid $white;
 		padding-left:12px;
 		color:$white;
+		&:first-child {
+			border-bottom: 1px solid $white;
+			font-weight: 300;
+			color:$white;
+			padding-left:12px;
+		}
 		&:before {
 			content: none;
 		}
@@ -704,9 +710,6 @@
   	.nav-page-list {
 		li {
 		  	background-color: $sinbad-medium;
-		  	&:hover {
-				background: $sinbad-hover;
-		  }
 		}
 		> ul > li:last-child {
   		background-color: $light-grey;
@@ -714,31 +717,31 @@
 				background: $silver-dark;
 			}
 		}
-		.list-emphasis > a {
-		  background: $sinbad-active;
-		}
+		.list-emphasis { 
+			> span {
+			background: $sinbad-active;
+			}
 		ul {
 			li {
 				background: $sinbad-medium;
 				&:hover {
 					background: $sinbad-hover;
+					}
 				}
   			li.active {
-  				background: $sinbad-dark;
-  			}
-  		}
-		}
-  }
+  					background: $sinbad-dark;
+  					}
+  				}
+			}
+  		
+  	}
 }
 
 //KATASTER
 .nav-branch--oereb {
 	.nav-page-list {
 		li {
-			background-color: $shilo-medium;
-			&:hover {
-				background: $shilo-hover;
-			}
+			background-color: $shilo-medium;		
 		}
 	> ul > li:last-child {
    		background-color: $light-grey;
@@ -746,18 +749,20 @@
 			background: $silver-dark;
 			}
 	}
-	.list-emphasis> a {
-	  background: $shilo-active;
-	}
+	.list-emphasis {
+		> span {
+			background: $shilo-active;
+		}
 		ul {
 			li {
 				background: $shilo-medium;
 				&:hover {
 					background: $shilo-hover;
+					}
 				}
-			}
 			li.active {
 				background: $shilo-dark;
+				}
 			}
 		}
 	}
@@ -767,23 +772,22 @@
 .nav-branch--gb {
 	.nav-page-list {
 		li {
-			background-color: $sapling-medium;
-			&:hover {
-				background: $sapling-hover;
-			}
+			background-color: $sapling-medium;			
 		}
-	.list-emphasis > a {
-	  background: $sapling-active;
-	}
+	.list-emphasis { 
+		> span {
+			background: $sapling-active;
+			}
 		ul {
 			li {
 				background: $sapling-medium;
 				&:hover {
 					background: $sapling-hover;
+					}
 				}
-			}
-			li.active {
-				background: $sapling-dark;
+				li.active {
+					background: $sapling-dark;
+				}
 			}
 		}
 	}
