@@ -9,13 +9,13 @@
  <!-- The tab navigation -->
 {% block mainnavigation %}
 <ul class="nav navbar-nav" role="navigation">
-  <li class="yamm-fw">
+  <li class="current yamm-fw">
     <a href="#">Mensuration officiel <span class="sr-only">current page</span></a>
   </li>
   <li class="yamm-fw">
     <a href="#">Öreb-Cadastre</a>
   </li>
-  <li class="current yamm-fw">
+  <li class="yamm-fw">
     <a href="#">Grundbuch</a>
   </li>
   <li class="yamm-fw">
@@ -24,27 +24,11 @@
   <li class="yamm-fw">
     <a href="#">Services &<br /> publications</a>
   </li>
-  <li class=" yamm-fw">
+  <li class="yamm-fw">
     <a href="#">Actualitè</a>
   </li>
-  <li class="dropdown yamm-fw">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guide pour les professionnels</a>
-    <ul class="dropdown-menu" role="menu">
-      <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
-      <li>
-        <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
-        <div class="yamm-content container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <ul>
-              	<li><a href="#">Guide de la mensuration officielle</a></li>
-			  	<li><a href="#">Guide du cadastre RDPPF</a></li>
-              </ul>
-            </div>                    
-          </div>
-        </div><!-- `yamm-content` end -->
-      </li><!-- Dropdown `li` end -->
-    </ul><!-- Dropdown `ul` end -->
+  <li class="yamm-fw">
+    <a href="#">Guide pour les professionnels</a>
   </li>
 </ul>
 {% endblock mainnavigation %}
