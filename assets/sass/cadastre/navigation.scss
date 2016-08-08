@@ -377,12 +377,8 @@
   background: $dark-grey;
   position: absolute;
   top:12px;
-  right: 355px;
+  right: 390px;
   @media only screen and (max-width: $screen-sm-max) {
-/*
-	margin-right: 0px;
-	float: left;
-*/
 	right: 320px;
   }
   li {
@@ -513,7 +509,7 @@
 	  top:10px;
 	  border-bottom: 0;
 	  float: none;
-	  right: 160px;
+	  right: 145px;
   }
   .navbar-nav {
 	@media only screen and (max-width: $screen-xs-max) {
