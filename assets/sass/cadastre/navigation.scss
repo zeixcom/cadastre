@@ -370,11 +370,15 @@
 
 .nav-service {
   background: $dark-grey;
-  float: right;
-  margin-right: 90px;
+  position: absolute;
+  top:12px;
+  right: 355px;
   @media only screen and (max-width: $screen-sm-max) {
+/*
 	margin-right: 0px;
 	float: left;
+*/
+	right: 320px;
   }
   li {
     margin-left: 2.8em;
@@ -441,9 +445,7 @@
 			background-color: $white;
 			box-shadow: none;
 			color:$night-rider;
-			position: relative;
-			left:125px;
-
+			margin-left: 160px;
 			.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 				color:$night-rider;
 			}
@@ -502,8 +504,11 @@
 		}
 		
   &.yamm--select {
-	  position: relative;
-	  top:-2px;
+	  position: absolute;
+	  top:10px;
+	  border-bottom: 0;
+	  float: none;
+	  right: 160px;
   }
   .navbar-nav {
 	@media only screen and (max-width: $screen-xs-max) {
