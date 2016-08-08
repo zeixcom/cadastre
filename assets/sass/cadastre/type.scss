@@ -19,6 +19,22 @@ small, .small {
   font-size: $font-size-small;
 }
 
+
+.textimage {
+	h2 {
+		margin:18px 0 12px 0;
+		line-height: 27px;
+	}
+	figure {
+		margin: 0 0 12px 0;
+	}
+}
+
+.lead {
+	margin-bottom: 18px;
+}
+
+
 @media only screen and (max-width: $screen-sm-max) {
   body {
     font-size: $font-size-base;
