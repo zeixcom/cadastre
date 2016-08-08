@@ -64,10 +64,12 @@
 			}
 		   
 		   &:nth-child(4), &:nth-child(5), &:nth-child(6) {
-			   &.current>a {
+			   &.current > a, 
+			   &.current > a:visited {
 				   height:60px;
 				   padding-top:10px;
-				   background: none;
+ 				   border-top: 5px solid $silver;
+					
 				   // 	max : 1279
 					@media only screen and (max-width: $screen-md-max) {
 					    height:61px;
@@ -75,9 +77,12 @@
 					// 	max : 1023  
 					@media only screen and (max-width: $screen-sm-max) {
 					     height:55px;
-					     background: $silver;
+					     padding-top:5px;
 					}
 					
+			   }
+			   &.current > a:hover {
+				   background: none;
 			   }
 		   }
 		   
