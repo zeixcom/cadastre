@@ -357,7 +357,7 @@
    }
    
 	   .navbar-nav {
-		  width: 1200px;
+		width: 1200px;
 	    margin: 0 auto;
 	    display: block;
 	    position: relative;
@@ -665,6 +665,7 @@
 		}
 	}
 	
+/*
 	.icon--less {
 		background: transparent;
 		font-size: 14px;
@@ -677,7 +678,8 @@
 			color:$night-rider;
 		}
 	}
-	.icon--arrow-left {
+*/
+	.icon--arrow-left, .icon--less {
 		background: transparent;
 		font-size: 14px;
 		color:$night-rider;
@@ -685,9 +687,10 @@
 		padding-left:0px;
 		text-decoration: none;
 		display: inline-block;
-		
+		border-bottom: 0px;
 		width: auto;
 		margin: 15px 0 15px 20px;
+		padding:0;
 		
 		@media only screen and (max-width: $screen-sm-max) {
 			margin-left: 30px;
@@ -706,8 +709,15 @@
 		}
 		&:hover {
 			border-bottom: 1px solid $night-rider;
+			text-decoration: none;
 		}
 	}	
+}
+
+.icon--before.icon--less:before, 
+a.icon--less[data-toggle=collapse]:before, 
+a.icon--less[data-toggle=collapse]:before {
+	content:'ö';
 }
 
 
