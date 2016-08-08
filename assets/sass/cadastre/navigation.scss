@@ -84,7 +84,7 @@
 		   
 		  
 		   &:nth-child(1) a, &:nth-child(2) a, &:nth-child(3) a {
-			   padding:33px 30px 27px 30px;
+			   padding:33px 30px 25px 30px;
 			   font-size: 1.5em;
 			   max-width: 190px;
 			   height: 116px;
@@ -164,6 +164,7 @@
 			   top:0px;
 			   &.current>a {
 				   padding-top:21px;
+				   height: 118px;
 				   border-bottom: 1px solid $gainsboro;
 				   // 	max : 1279
 					@media only screen and (max-width: $screen-md-max) {
