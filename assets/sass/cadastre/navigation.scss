@@ -39,12 +39,12 @@
 	   // 	max : 1279
 		@media only screen and (max-width: $screen-md-max) {
 		    max-width: $container-desktop;
-		    padding-top:100px;
+		    padding-top:60px;
 		}
 		// 	max : 1023  
 		@media only screen and (max-width: $screen-sm-max) {
 		    max-width: $container-tablet;
-		    padding-top:92px;
+		    padding-top:52px;
 		}
  
 	   >li {
@@ -370,7 +370,8 @@
   float: right;
   margin-right: 90px;
   @media only screen and (max-width: $screen-sm-max) {
-	margin-right: 22px;
+	margin-right: 0px;
+	float: left;
   }
   li {
     margin-left: 2.8em;
