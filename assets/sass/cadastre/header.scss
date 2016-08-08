@@ -16,11 +16,11 @@ header {
     height: 45px;
     z-index: 100;
     position: absolute;
-/*
-    left: 0;
-    width: 100%;
-*/
-
+	
+	@media only screen and (max-width: $screen-xs-max) {
+		width:100%;
+	}
+	
     .nav-services {
 	    background: none;
 		padding-top: 12px;
