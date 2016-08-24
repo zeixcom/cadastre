@@ -37,12 +37,12 @@
      padding: 46px 0 0 0;
      
      // max : 1279
-    @media only screen and (max-width: $screen-md-max) {
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
       max-width: $container-desktop;
       padding-top:60px;
     }
     //  max : 1023  
-    @media only screen and (max-width: $screen-sm-max) {
+    @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
       max-width: $container-tablet;
       padding-top:52px;
     }
@@ -414,10 +414,10 @@
   padding-top: ($grid-gutter-width / 2);
   font-size: $font-size-small;
     
-    @media only screen and (max-width: $screen-md-max) {
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
         max-width: $container-desktop;
     }
-    @media only screen and (max-width: $screen-sm-max) {
+    @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
         max-width: $container-tablet;
     }
     @media only screen and (max-width: $screen-xs-max) {
@@ -431,10 +431,10 @@
   left:auto;
   padding-top: 0;
     
-    @media only screen and (max-width: $screen-md-max) {
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
         max-width: $container-desktop;
     }
-    @media only screen and (max-width: $screen-sm-max) {
+    @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
         max-width: $container-tablet;
     }
 

@@ -75,10 +75,10 @@ body {
 	
 	background-position: 0 208px;
 
-		@media only screen and (max-width: $screen-md-max) {
+		@media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 		  width: $container-desktop;
 		}
-		@media only screen and (max-width: $screen-sm-max) {
+		@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 		  width: $container-tablet;		    
 		}
 		@media only screen and (max-width: $screen-xs-max) {
@@ -115,18 +115,18 @@ body {
 	padding: 0 $grid-gutter-width 0;
 	
   // 	max : 1279
-  @media only screen and (max-width: $screen-md-max) {
+  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
     width: $container-desktop;//940 + 48px
     padding: 21px $grid-gutter-width 0;
   }
 	// 	max : 1023  
-	@media only screen and (max-width: $screen-sm-max) {
+	@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     padding-left: ($grid-gutter-width / 2);
     padding-right: ($grid-gutter-width / 2);
     max-width: $container-tablet;			 
 	}
 	@media only screen and (max-width: $screen-xs-max) {
-		margin-top: 67px;
+		margin-top: 90px;
 		box-shadow: none;
 		max-width: 100%;
 	}
