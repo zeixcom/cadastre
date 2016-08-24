@@ -714,6 +714,16 @@
   } 
 }
 
+.icon--before.icon--less, 
+a.icon--less[data-toggle=collapse] {
+  &:before {
+    content: 'ö';
+  }
+  &.carousel-control:before {
+    content: '.';
+  }
+}
+
 
 //AMTLICHE VERMESSUNG
 .nav-branch--av .nav-page-list {
