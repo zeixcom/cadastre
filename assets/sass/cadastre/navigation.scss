@@ -579,7 +579,7 @@
 
 
 .nav-page-list {  
-  padding-left:0px;
+  padding-left:0;
   li {
     background: $light-grey;
     padding-left:12px;
@@ -615,7 +615,8 @@
       border-bottom: 0;
     }
   }
-  li.list-emphasis > span {
+  li.list-emphasis > span,
+  li.list-emphasis > a {
     background: $very-dark-grey;
     border-bottom: 1px solid $white;
     padding-left:12px;
@@ -677,15 +678,16 @@
     }
   }
 */
-  .icon--arrow-left, .icon--less {
+  .icon--arrow-left,
+  .nav-page-list .icon--less {
     background: transparent;
     font-size: 14px;
     color:$night-rider;
     height:19px;
-    padding-left:0px;
+    padding-left:0;
     text-decoration: none;
     display: inline-block;
-    border-bottom: 0px;
+    border-bottom: 0;
     width: auto;
     margin: 15px 0 15px 20px;
     padding:0;
@@ -698,8 +700,8 @@
     }
     &:before {
       font-size: .8em;
-      top: 0px;
-      left: 0px;
+      top: 0;
+      left: 0;
       content:'ö';
       color:$night-rider;
       padding-right: 8px;
@@ -710,11 +712,6 @@
       text-decoration: none;
     }
   } 
-}
-
-.icon--before.icon--less:before, 
-a.icon--less[data-toggle=collapse]:before {
-  content:'ö';
 }
 
 
@@ -730,7 +727,8 @@ a.icon--less[data-toggle=collapse]:before {
     }
   }
   .list-emphasis { 
-    > span {
+    > span,
+    > a {
       background: $sinbad-active;
     }
     ul {
@@ -759,7 +757,8 @@ a.icon--less[data-toggle=collapse]:before {
     }
   }
   .list-emphasis {
-    > span {
+    > span,
+    > a {
     background: $shilo-active;
     }
     ul {
@@ -782,7 +781,8 @@ a.icon--less[data-toggle=collapse]:before {
     background-color: $sapling-medium;      
   }
   .list-emphasis { 
-    > span {
+    > span,
+    > a {
       background: $sapling-active;
     }
     ul {
