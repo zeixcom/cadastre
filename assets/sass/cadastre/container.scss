@@ -1,0 +1,27 @@
+/* ==========================================================
+ * container.scss
+ * Freebrand container styles for cadastre
+ *
+ * Author: Esther Brunner
+ * Date:   2016-10-13 
+ *
+ * Copyright 2016 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+ 
+.freebrandContainer {
+  background-color: $bg-color;
+  padding: ($grid-gutter-width / 2);
+}
+
+.nav-branch--av .freebrandContainer {
+  background-color: $sinbad-medium;
+}
+
+.nav-branch--oereb .freebrandContainer {
+  background-color: $shilo-medium;
+}
+
+.nav-branch--gb .freebrandContainer {
+  background-color: $sapling-medium;
+}
