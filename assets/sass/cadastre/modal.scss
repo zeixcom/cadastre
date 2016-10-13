@@ -1,0 +1,22 @@
+/* ==========================================================
+ * modal.scss
+ * Modal styles for cadastre
+ *
+ * Author: Esther Brunner
+ * Date:   2016-10-13 
+ *
+ * Copyright 2016 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+ 
+.modal-open {
+
+  .container-fluid {
+    z-index: inherit;
+  }
+  
+  .modal-backdrop {
+    z-index: 1039;
+  }
+
+}
