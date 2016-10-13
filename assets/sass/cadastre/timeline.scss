@@ -10,13 +10,35 @@
  =========================================================== */
  
  .timeline {
+   
 	 .container {
 		 background: none;
 		 padding-top: 20px;
 	 }
+	 
 	 .nav-container {
-		 .date, .title {
-			 color:$black;
+		 .date,
+		 .title {
+			 color: $black;
 		 }
 	 }
+	 
+	 .vco-storyjs {
+  	 font-family: $din;
+	 }
+	 
+   .storyjs-embed,
+   .vco-storyjs {
+     background-color: transparent;
+   }
+   
+   .vco-slider .nav-previous,
+   .vco-slider .nav-next {
+     color: $dark-blue;
+   }
+   
+   .vco-slider .slider-item .content .content-container.layout-text .text .container {
+     padding: ($grid-gutter-width / 2);
+     background: $bg-container;
+   }
  }
