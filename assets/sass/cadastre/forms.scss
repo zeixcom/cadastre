@@ -14,3 +14,8 @@
 	border-color: $dark-grey;
 }
 
+@media (min-width: $screen-sm-min) {
+  .form-horizontal .control-label {
+    float: left;
+  }
+}
