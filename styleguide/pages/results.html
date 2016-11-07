@@ -295,13 +295,30 @@
 
       <br>
 
-      <form action="#" class="form-inline search-box">
+      <!-- <form action="#" class="form-inline search-box">
         <fieldset class="clearfix">
           <div class="form-group">
             <label for="inputSearch" class="control-label">Search by keyword</label>
             <input type="text" class="form-control" id="inputSearch" placeholder="Search by keyword">
           </div>
           <input class="btn btn-primary" aria-label="Find" type="submit" value="Find">
+        </fieldset>
+      </form> -->
+      
+      <form action="#" class="search-box">
+        <fieldset class="clearfix">
+          <div class="form-group">
+            <div class="row">
+              <label for="inputSearch" class="control-label col-sm-12">Suche nach</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="q" id="inputSearch" value="öreb" placeholder="öreb">
+                <input type="hidden" name="_charset_" value="UTF-8">
+              </div>
+              <div class="col-sm-3">
+                <input class="btn btn-primary" aria-label="Suchen" type="submit" value="Suchen">
+              </div>
+            </div>
+          </div>
         </fieldset>
       </form>
 
