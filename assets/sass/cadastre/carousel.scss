@@ -129,12 +129,17 @@ The carousel component is not totally compliant with accessibility standards. If
 
 .carousel-control {
   opacity: 1;
+  border: 0;
+  width: 8%;
+  text-shadow: 0px 0px 0px transparent;
+  
   &:hover {
     opacity: 1;
   }
 }
 
-.carousel-control.right, .carousel-control.left {
+.carousel-control.right,
+.carousel-control.left {
   background-image: none !important;
   background: none;
   filter: none; // fix for IE

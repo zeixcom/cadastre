@@ -15,8 +15,10 @@
     z-index: inherit;
   }
   
-  .modal-backdrop {
+  .modal-backdrop,
+  .blueimp-gallery {
     z-index: 1039;
+    background: rgba(0, 0, 0, 0.5);
   }
 
 }
