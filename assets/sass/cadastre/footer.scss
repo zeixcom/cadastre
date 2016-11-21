@@ -57,11 +57,11 @@ footer {
   
   @media only screen and (max-width: $screen-xs-max) {
     .footer-line {
-      display: none;
+      display: none !important;
     }
     
     .footer-line + img {
-      display: none;
+      display: none !important;
     }
   }
 }
@@ -174,5 +174,5 @@ address {
     li {
       border-top: 1px solid $coal;
     }
-  } 
+  }
 }
