@@ -21,7 +21,7 @@ footer {
   h3 {
     font-size: 1em;
     color: $very-pale-blue;
-    margin: (2 * $grid-gutter-width) 0 1em;
+    margin: 0 0 1em;
     padding: 0;
   }
   
@@ -42,7 +42,7 @@ footer {
     margin: 0 auto;
     background: $night-rider;
     box-shadow: none;
-    padding-top:24px;
+    padding-top: $grid-gutter-width;
     @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
       max-width: $container-desktop;
     }
@@ -63,6 +63,20 @@ footer {
     .footer-line + img {
       display: none !important;
     }
+  }
+  
+  .collapse {
+    display: block;
+    margin-left: 0;
+    border-bottom: 1px solid $coal;
+    
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      &:not(.in) {
+        display: none;
+        border-bottom: 0;
+      }
+    }
+    
   }
 }
 
@@ -109,11 +123,10 @@ address {
   margin: 0 auto;
   background: transparent;
   border: 0;
-  padding-bottom: (2 * $grid-gutter-width);
+  padding-bottom: 0;
   
   @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
     max-width: $container-desktop;
-    padding-top:(2 * $grid-gutter-width);
   }
   
   @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -123,6 +136,10 @@ address {
   a {
     font-size: 1em;
     padding: 0;    
+  }
+  
+  .container-fluid {
+    border-bottom: 1px solid $coal;
   }
   
   .site-map-toggle {
@@ -152,9 +169,22 @@ address {
       top: -1px;
     }
     @media only screen and (max-width: $screen-xs-max) {
-	    	left:12px;
+	    left: 12px;
   	}
     
+  }
+}
+
+.site-map + .container-fluid {
+  border-bottom: 1px solid $coal;
+  margin-bottom: ($grid-gutter-width / 2); 
+}
+
+.links-social {
+  margin-bottom: ($grid-gutter-width / 2);
+  
+  img {
+    margin: 0;
   }
 }
 
