@@ -61,10 +61,8 @@
 	}
 
   .tab-content {
-    border-bottom: 1px solid  $darker-grey;
-    border-left: 1px solid  $darker-grey;
-    border-right: 1px solid  $darker-grey;
-    border-top: 0;
+    border: 0;
+    padding: 0;
   }
 
     address {
