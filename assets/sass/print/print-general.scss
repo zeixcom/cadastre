@@ -41,7 +41,7 @@ unbedingt Reihenfolge behalten
   }
 
   // Disable Bootstrap layout for preview
-  .row{
+  .row {
     margin: 0;
   }
   [class*="col-"] {
@@ -50,15 +50,30 @@ unbedingt Reihenfolge behalten
   }
   .container,
   .container-fluid {
+    background: #fff !important;
     padding: 0;
   }
   header {
-    padding: 0 15px;
-  }
-
-
-  header {
-    margin: 40px 0;
+    padding: 0 12px;
+    margin: 0;
+    position: relative;
+    height: auto;
+    
+    a.brand {
+      background: none;
+      display: block !important;
+      width: auto;
+      height: auto;
+      
+      img {
+        content: url(/etc/clientlibs/cmsms-cadastre-internet/img/cadastre_logo.png);
+        width: 328px;
+        height: 49px;
+        visibility: visible;
+        position: static;
+        max-width: 328px;
+      }
+    }
   }
   .tab-content .row .row {
     margin-left: -20px !important;
@@ -79,6 +94,7 @@ unbedingt Reihenfolge behalten
     font-family: sans-serif;
   }
   a[href*="tel:"]:after {content: none !important;}
+  header a.brand:after,
   .breadcrumb li:not(:nth-last-child(3)) a:after,
   a.carousel-control:after,
   a[data-toggle=tab]:after,
@@ -130,11 +146,13 @@ unbedingt Reihenfolge behalten
 
 .print-preview {
   display: block !important;
+  background: white;
   @include print-preview;
 
   .print-element {
     padding: 0 25px;
   }
+  
 }
 
 @media print {
