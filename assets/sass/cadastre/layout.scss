@@ -136,3 +136,8 @@ div.section {
 hr { 
   background: $hr-grey;
 }
+
+// Remove effect of double-nesting .col-md-8 for detail pages
+.col-md-8 > .row > .col-md-8 {
+  width: 100%;
+}

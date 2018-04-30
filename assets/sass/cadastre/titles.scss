@@ -25,6 +25,13 @@ h1 {
   }
 }
 
+// Smaller headlines on detail pages for news, events and publications
+.col-md-8 > .row > .col-md-8 {
+  h1 { font-size: 1.875em; }
+  h2 { font-size: 1.3125em; }
+  h3 { font-size: 1.125em; }
+}
+
 
 
 
