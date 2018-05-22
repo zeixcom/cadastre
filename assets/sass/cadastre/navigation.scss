@@ -533,6 +533,7 @@
   &[class*=col-] {
     @media only screen and (max-width: $screen-xs-max) {
       border-bottom: 0;
+      margin-bottom: 0.6em;
     }
   }
   a[data-toggle=collapse]:before {
